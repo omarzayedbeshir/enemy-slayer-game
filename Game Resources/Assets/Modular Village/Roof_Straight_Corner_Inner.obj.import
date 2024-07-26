@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c3sbl5em1e6t"
+path="res://.godot/imported/Roof_Straight_Corner_Inner.obj-1101310b1ced1a5f5d7e657f2197edbc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Straight_Corner_Inner.obj-1101310b1ced1a5f5d7e657f2197edbc.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Roof_Straight_Corner_Inner.obj"
+dest_files=["res://.godot/imported/Roof_Straight_Corner_Inner.obj-1101310b1ced1a5f5d7e657f2197edbc.mesh", "res://.godot/imported/Roof_Straight_Corner_Inner.obj-1101310b1ced1a5f5d7e657f2197edbc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

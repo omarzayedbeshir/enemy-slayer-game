@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wk0d6pdv03ne"
+path="res://.godot/imported/siege-catapult.obj-56a508477e28f4ff5c0d5c9618335324.mesh"
+
+[deps]
+
+files=["res://.godot/imported/siege-catapult.obj-56a508477e28f4ff5c0d5c9618335324.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/siege-catapult.obj"
+dest_files=["res://.godot/imported/siege-catapult.obj-56a508477e28f4ff5c0d5c9618335324.mesh", "res://.godot/imported/siege-catapult.obj-56a508477e28f4ff5c0d5c9618335324.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

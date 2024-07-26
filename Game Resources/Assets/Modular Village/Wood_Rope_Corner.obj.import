@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://eelywiri1ono"
+path="res://.godot/imported/Wood_Rope_Corner.obj-06a7a09d2922d8b1616d43fc67a7adde.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Rope_Corner.obj-06a7a09d2922d8b1616d43fc67a7adde.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Wood_Rope_Corner.obj"
+dest_files=["res://.godot/imported/Wood_Rope_Corner.obj-06a7a09d2922d8b1616d43fc67a7adde.mesh", "res://.godot/imported/Wood_Rope_Corner.obj-06a7a09d2922d8b1616d43fc67a7adde.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

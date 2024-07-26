@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://e6vdil5smif3"
+path="res://.godot/imported/Canopy_Beam.obj-4fe982aa8ab1f377c0bf34d1b0e33703.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Canopy_Beam.obj-4fe982aa8ab1f377c0bf34d1b0e33703.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Canopy_Beam.obj"
+dest_files=["res://.godot/imported/Canopy_Beam.obj-4fe982aa8ab1f377c0bf34d1b0e33703.mesh", "res://.godot/imported/Canopy_Beam.obj-4fe982aa8ab1f377c0bf34d1b0e33703.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

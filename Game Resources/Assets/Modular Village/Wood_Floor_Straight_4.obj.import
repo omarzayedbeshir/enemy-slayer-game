@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vs16whk877wy"
+path="res://.godot/imported/Wood_Floor_Straight_4.obj-37229c86e4b6b2d08621c1a46bd4e4cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Floor_Straight_4.obj-37229c86e4b6b2d08621c1a46bd4e4cb.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Wood_Floor_Straight_4.obj"
+dest_files=["res://.godot/imported/Wood_Floor_Straight_4.obj-37229c86e4b6b2d08621c1a46bd4e4cb.mesh", "res://.godot/imported/Wood_Floor_Straight_4.obj-37229c86e4b6b2d08621c1a46bd4e4cb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

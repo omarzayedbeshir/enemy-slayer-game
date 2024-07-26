@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7pa7pimp6v2l"
+path="res://.godot/imported/Hilly_Terrain_Path_Hill_Gentle_Plain_Side.obj-606eb94b130abae93173ba860644aa8e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Terrain_Path_Hill_Gentle_Plain_Side.obj-606eb94b130abae93173ba860644aa8e.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Hilly_Terrain_Path_Hill_Gentle_Plain_Side.obj"
+dest_files=["res://.godot/imported/Hilly_Terrain_Path_Hill_Gentle_Plain_Side.obj-606eb94b130abae93173ba860644aa8e.mesh", "res://.godot/imported/Hilly_Terrain_Path_Hill_Gentle_Plain_Side.obj-606eb94b130abae93173ba860644aa8e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

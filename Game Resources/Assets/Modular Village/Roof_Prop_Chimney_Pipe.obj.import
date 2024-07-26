@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfluc6whi3kt2"
+path="res://.godot/imported/Roof_Prop_Chimney_Pipe.obj-09ca215ebca6274fed1d6338626a0133.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Prop_Chimney_Pipe.obj-09ca215ebca6274fed1d6338626a0133.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Roof_Prop_Chimney_Pipe.obj"
+dest_files=["res://.godot/imported/Roof_Prop_Chimney_Pipe.obj-09ca215ebca6274fed1d6338626a0133.mesh", "res://.godot/imported/Roof_Prop_Chimney_Pipe.obj-09ca215ebca6274fed1d6338626a0133.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

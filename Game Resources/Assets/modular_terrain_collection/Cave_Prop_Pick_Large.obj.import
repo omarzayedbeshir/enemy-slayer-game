@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://baqr6j32brve2"
+path="res://.godot/imported/Cave_Prop_Pick_Large.obj-ce6b44f50c1f79670a36b8ea4f926668.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Prop_Pick_Large.obj-ce6b44f50c1f79670a36b8ea4f926668.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Cave_Prop_Pick_Large.obj"
+dest_files=["res://.godot/imported/Cave_Prop_Pick_Large.obj-ce6b44f50c1f79670a36b8ea4f926668.mesh", "res://.godot/imported/Cave_Prop_Pick_Large.obj-ce6b44f50c1f79670a36b8ea4f926668.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

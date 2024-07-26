@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0bxroyq5vyxp"
+path="res://.godot/imported/wall-narrow-stairs.obj-3f8227d27fd5e6b6726cd802f1ffa2e1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-narrow-stairs.obj-3f8227d27fd5e6b6726cd802f1ffa2e1.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/wall-narrow-stairs.obj"
+dest_files=["res://.godot/imported/wall-narrow-stairs.obj-3f8227d27fd5e6b6726cd802f1ffa2e1.mesh", "res://.godot/imported/wall-narrow-stairs.obj-3f8227d27fd5e6b6726cd802f1ffa2e1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

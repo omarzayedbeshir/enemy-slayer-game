@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1x2ev4nwsy1p"
+path="res://.godot/imported/ground-hills.obj-8b5e7c8c1656f338860ff309be39e940.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ground-hills.obj-8b5e7c8c1656f338860ff309be39e940.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/ground-hills.obj"
+dest_files=["res://.godot/imported/ground-hills.obj-8b5e7c8c1656f338860ff309be39e940.mesh", "res://.godot/imported/ground-hills.obj-8b5e7c8c1656f338860ff309be39e940.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

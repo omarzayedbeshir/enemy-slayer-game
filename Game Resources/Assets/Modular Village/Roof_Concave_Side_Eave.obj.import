@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqype3br6e2mh"
+path="res://.godot/imported/Roof_Concave_Side_Eave.obj-50f6c164fd6f5555860618a2d2fb30dc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Concave_Side_Eave.obj-50f6c164fd6f5555860618a2d2fb30dc.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Roof_Concave_Side_Eave.obj"
+dest_files=["res://.godot/imported/Roof_Concave_Side_Eave.obj-50f6c164fd6f5555860618a2d2fb30dc.mesh", "res://.godot/imported/Roof_Concave_Side_Eave.obj-50f6c164fd6f5555860618a2d2fb30dc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

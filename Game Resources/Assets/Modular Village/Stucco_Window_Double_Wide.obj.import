@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6twt08kbw1rs"
+path="res://.godot/imported/Stucco_Window_Double_Wide.obj-fa83b579c398a26913b6c1172c4e8ee6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stucco_Window_Double_Wide.obj-fa83b579c398a26913b6c1172c4e8ee6.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Stucco_Window_Double_Wide.obj"
+dest_files=["res://.godot/imported/Stucco_Window_Double_Wide.obj-fa83b579c398a26913b6c1172c4e8ee6.mesh", "res://.godot/imported/Stucco_Window_Double_Wide.obj-fa83b579c398a26913b6c1172c4e8ee6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

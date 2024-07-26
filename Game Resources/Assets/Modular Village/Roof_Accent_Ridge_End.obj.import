@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csvp8y0k1y7oi"
+path="res://.godot/imported/Roof_Accent_Ridge_End.obj-62125fc904633c24c6d9b13b01f097d1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Accent_Ridge_End.obj-62125fc904633c24c6d9b13b01f097d1.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Roof_Accent_Ridge_End.obj"
+dest_files=["res://.godot/imported/Roof_Accent_Ridge_End.obj-62125fc904633c24c6d9b13b01f097d1.mesh", "res://.godot/imported/Roof_Accent_Ridge_End.obj-62125fc904633c24c6d9b13b01f097d1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

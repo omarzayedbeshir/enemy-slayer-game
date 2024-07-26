@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ca4awrnih8jth"
+path="res://.godot/imported/Hilly_Prop_Rock_3.obj-fdec5ce4ca8da659165aaa5810377cf4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Rock_3.obj-fdec5ce4ca8da659165aaa5810377cf4.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Hilly_Prop_Rock_3.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Rock_3.obj-fdec5ce4ca8da659165aaa5810377cf4.mesh", "res://.godot/imported/Hilly_Prop_Rock_3.obj-fdec5ce4ca8da659165aaa5810377cf4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c4nogsalepmaf"
+path="res://.godot/imported/Wall_Prop_Windmill_1.obj-d0b4853aeb8bc55c3dbd95c18e65a6e1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Prop_Windmill_1.obj-d0b4853aeb8bc55c3dbd95c18e65a6e1.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Wall_Prop_Windmill_1.obj"
+dest_files=["res://.godot/imported/Wall_Prop_Windmill_1.obj-d0b4853aeb8bc55c3dbd95c18e65a6e1.mesh", "res://.godot/imported/Wall_Prop_Windmill_1.obj-d0b4853aeb8bc55c3dbd95c18e65a6e1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ds5ya52kyeqe5"
+path="res://.godot/imported/Cliff_Prop_Rock_2.obj-740f9b4572d7ac982ecdc5815fbe34eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cliff_Prop_Rock_2.obj-740f9b4572d7ac982ecdc5815fbe34eb.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Cliff_Prop_Rock_2.obj"
+dest_files=["res://.godot/imported/Cliff_Prop_Rock_2.obj-740f9b4572d7ac982ecdc5815fbe34eb.mesh", "res://.godot/imported/Cliff_Prop_Rock_2.obj-740f9b4572d7ac982ecdc5815fbe34eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

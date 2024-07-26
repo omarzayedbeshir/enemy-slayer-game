@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwt1mcqafbhk5"
+path="res://.godot/imported/wall-corner-half.obj-4e6a85b3a5fd572a253afbb3a3145603.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-corner-half.obj-4e6a85b3a5fd572a253afbb3a3145603.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/wall-corner-half.obj"
+dest_files=["res://.godot/imported/wall-corner-half.obj-4e6a85b3a5fd572a253afbb3a3145603.mesh", "res://.godot/imported/wall-corner-half.obj-4e6a85b3a5fd572a253afbb3a3145603.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

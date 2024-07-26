@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://puqdps5vipcf"
+path="res://.godot/imported/Prop_Well_1.obj-970ba2cae83a983900876453c332c52a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Well_1.obj-970ba2cae83a983900876453c332c52a.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Prop_Well_1.obj"
+dest_files=["res://.godot/imported/Prop_Well_1.obj-970ba2cae83a983900876453c332c52a.mesh", "res://.godot/imported/Prop_Well_1.obj-970ba2cae83a983900876453c332c52a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

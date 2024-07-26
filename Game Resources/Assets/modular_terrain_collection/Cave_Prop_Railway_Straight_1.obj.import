@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bo3jqqyl4p05r"
+path="res://.godot/imported/Cave_Prop_Railway_Straight_1.obj-46d5682551017ec1ee5adf16a70cb063.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Prop_Railway_Straight_1.obj-46d5682551017ec1ee5adf16a70cb063.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Cave_Prop_Railway_Straight_1.obj"
+dest_files=["res://.godot/imported/Cave_Prop_Railway_Straight_1.obj-46d5682551017ec1ee5adf16a70cb063.mesh", "res://.godot/imported/Cave_Prop_Railway_Straight_1.obj-46d5682551017ec1ee5adf16a70cb063.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bijos2upleost"
+path="res://.godot/imported/tower-square-mid-door.obj-3a0ba2c6c8e46a411b43f7b8fd8117f5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tower-square-mid-door.obj-3a0ba2c6c8e46a411b43f7b8fd8117f5.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/tower-square-mid-door.obj"
+dest_files=["res://.godot/imported/tower-square-mid-door.obj-3a0ba2c6c8e46a411b43f7b8fd8117f5.mesh", "res://.godot/imported/tower-square-mid-door.obj-3a0ba2c6c8e46a411b43f7b8fd8117f5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

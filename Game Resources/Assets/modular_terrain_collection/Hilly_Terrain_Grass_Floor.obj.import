@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kyppm0tojn51"
+path="res://.godot/imported/Hilly_Terrain_Grass_Floor.obj-a78da291a03e4a188df02fede1386fe8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Terrain_Grass_Floor.obj-a78da291a03e4a188df02fede1386fe8.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Hilly_Terrain_Grass_Floor.obj"
+dest_files=["res://.godot/imported/Hilly_Terrain_Grass_Floor.obj-a78da291a03e4a188df02fede1386fe8.mesh", "res://.godot/imported/Hilly_Terrain_Grass_Floor.obj-a78da291a03e4a188df02fede1386fe8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

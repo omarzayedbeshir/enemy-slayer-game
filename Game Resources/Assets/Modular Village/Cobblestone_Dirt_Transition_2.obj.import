@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ham46gnoei2y"
+path="res://.godot/imported/Cobblestone_Dirt_Transition_2.obj-9dfe09aea0a03d201507bfce8b7260d1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cobblestone_Dirt_Transition_2.obj-9dfe09aea0a03d201507bfce8b7260d1.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Cobblestone_Dirt_Transition_2.obj"
+dest_files=["res://.godot/imported/Cobblestone_Dirt_Transition_2.obj-9dfe09aea0a03d201507bfce8b7260d1.mesh", "res://.godot/imported/Cobblestone_Dirt_Transition_2.obj-9dfe09aea0a03d201507bfce8b7260d1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

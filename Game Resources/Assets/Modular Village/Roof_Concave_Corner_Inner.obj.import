@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpx5vy66tfx14"
+path="res://.godot/imported/Roof_Concave_Corner_Inner.obj-55d4c836b174f69c564611a63e7d33d9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Concave_Corner_Inner.obj-55d4c836b174f69c564611a63e7d33d9.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Roof_Concave_Corner_Inner.obj"
+dest_files=["res://.godot/imported/Roof_Concave_Corner_Inner.obj-55d4c836b174f69c564611a63e7d33d9.mesh", "res://.godot/imported/Roof_Concave_Corner_Inner.obj-55d4c836b174f69c564611a63e7d33d9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

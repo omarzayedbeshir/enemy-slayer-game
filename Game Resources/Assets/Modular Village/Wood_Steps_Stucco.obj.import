@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://m2vxvqd2vqv"
+path="res://.godot/imported/Wood_Steps_Stucco.obj-8def91db6bffec79ec68b07dff6b5afb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Steps_Stucco.obj-8def91db6bffec79ec68b07dff6b5afb.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Wood_Steps_Stucco.obj"
+dest_files=["res://.godot/imported/Wood_Steps_Stucco.obj-8def91db6bffec79ec68b07dff6b5afb.mesh", "res://.godot/imported/Wood_Steps_Stucco.obj-8def91db6bffec79ec68b07dff6b5afb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

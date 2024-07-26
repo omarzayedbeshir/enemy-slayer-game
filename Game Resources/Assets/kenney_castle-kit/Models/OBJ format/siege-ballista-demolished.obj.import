@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c3wtbjghy40kg"
+path="res://.godot/imported/siege-ballista-demolished.obj-d0aaae6ed7b75edf1af9ec40093a702e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/siege-ballista-demolished.obj-d0aaae6ed7b75edf1af9ec40093a702e.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/siege-ballista-demolished.obj"
+dest_files=["res://.godot/imported/siege-ballista-demolished.obj-d0aaae6ed7b75edf1af9ec40093a702e.mesh", "res://.godot/imported/siege-ballista-demolished.obj-d0aaae6ed7b75edf1af9ec40093a702e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

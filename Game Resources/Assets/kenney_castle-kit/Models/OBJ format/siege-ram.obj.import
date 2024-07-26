@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bryui81ntmm81"
+path="res://.godot/imported/siege-ram.obj-c1b2f2e62ead212f428ae0ef6403f821.mesh"
+
+[deps]
+
+files=["res://.godot/imported/siege-ram.obj-c1b2f2e62ead212f428ae0ef6403f821.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/siege-ram.obj"
+dest_files=["res://.godot/imported/siege-ram.obj-c1b2f2e62ead212f428ae0ef6403f821.mesh", "res://.godot/imported/siege-ram.obj-c1b2f2e62ead212f428ae0ef6403f821.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

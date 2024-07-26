@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dey5t1r6vslt1"
+path="res://.godot/imported/Hilly_Prop_Flower_Daisy.obj-39f05004bbcf00e1e3cff67f5562fe2c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Flower_Daisy.obj-39f05004bbcf00e1e3cff67f5562fe2c.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Hilly_Prop_Flower_Daisy.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Flower_Daisy.obj-39f05004bbcf00e1e3cff67f5562fe2c.mesh", "res://.godot/imported/Hilly_Prop_Flower_Daisy.obj-39f05004bbcf00e1e3cff67f5562fe2c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

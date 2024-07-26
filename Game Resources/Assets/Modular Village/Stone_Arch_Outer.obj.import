@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bhkhjpm2qb1jk"
+path="res://.godot/imported/Stone_Arch_Outer.obj-e489b9001223d71cd6ddb53744d01c1f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stone_Arch_Outer.obj-e489b9001223d71cd6ddb53744d01c1f.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Stone_Arch_Outer.obj"
+dest_files=["res://.godot/imported/Stone_Arch_Outer.obj-e489b9001223d71cd6ddb53744d01c1f.mesh", "res://.godot/imported/Stone_Arch_Outer.obj-e489b9001223d71cd6ddb53744d01c1f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

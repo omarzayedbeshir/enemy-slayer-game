@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5kcy3x4bcipc"
+path="res://.godot/imported/Prop_Lamp_Street.obj-4c2638d0b87d0ef98924a8d7f74af107.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Lamp_Street.obj-4c2638d0b87d0ef98924a8d7f74af107.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Prop_Lamp_Street.obj"
+dest_files=["res://.godot/imported/Prop_Lamp_Street.obj-4c2638d0b87d0ef98924a8d7f74af107.mesh", "res://.godot/imported/Prop_Lamp_Street.obj-4c2638d0b87d0ef98924a8d7f74af107.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

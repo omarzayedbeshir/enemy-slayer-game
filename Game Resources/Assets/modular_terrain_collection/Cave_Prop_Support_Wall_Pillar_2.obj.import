@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bp4diw1ukdgaj"
+path="res://.godot/imported/Cave_Prop_Support_Wall_Pillar_2.obj-c2576f4011ee4e3856bf5e45af82b70d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Prop_Support_Wall_Pillar_2.obj-c2576f4011ee4e3856bf5e45af82b70d.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Cave_Prop_Support_Wall_Pillar_2.obj"
+dest_files=["res://.godot/imported/Cave_Prop_Support_Wall_Pillar_2.obj-c2576f4011ee4e3856bf5e45af82b70d.mesh", "res://.godot/imported/Cave_Prop_Support_Wall_Pillar_2.obj-c2576f4011ee4e3856bf5e45af82b70d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

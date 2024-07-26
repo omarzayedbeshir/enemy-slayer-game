@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://btm4txmix7yo7"
+path="res://.godot/imported/Hilly_Prop_Flower_Tulip.obj-a986ef271c95ec403f30cfa341c0a2e9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Flower_Tulip.obj-a986ef271c95ec403f30cfa341c0a2e9.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Hilly_Prop_Flower_Tulip.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Flower_Tulip.obj-a986ef271c95ec403f30cfa341c0a2e9.mesh", "res://.godot/imported/Hilly_Prop_Flower_Tulip.obj-a986ef271c95ec403f30cfa341c0a2e9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

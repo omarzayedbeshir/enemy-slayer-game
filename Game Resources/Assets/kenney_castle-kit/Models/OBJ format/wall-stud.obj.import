@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7uthrfexiu21"
+path="res://.godot/imported/wall-stud.obj-1205716c1010fe3cc09a291749621802.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-stud.obj-1205716c1010fe3cc09a291749621802.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/wall-stud.obj"
+dest_files=["res://.godot/imported/wall-stud.obj-1205716c1010fe3cc09a291749621802.mesh", "res://.godot/imported/wall-stud.obj-1205716c1010fe3cc09a291749621802.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

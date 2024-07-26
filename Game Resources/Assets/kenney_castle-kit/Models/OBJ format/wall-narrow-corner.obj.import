@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://83d5cfl82tx5"
+path="res://.godot/imported/wall-narrow-corner.obj-d1140956905ceadf545c66597435211d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-narrow-corner.obj-d1140956905ceadf545c66597435211d.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/wall-narrow-corner.obj"
+dest_files=["res://.godot/imported/wall-narrow-corner.obj-d1140956905ceadf545c66597435211d.mesh", "res://.godot/imported/wall-narrow-corner.obj-d1140956905ceadf545c66597435211d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

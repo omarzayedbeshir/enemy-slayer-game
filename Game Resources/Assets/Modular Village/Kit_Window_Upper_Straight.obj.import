@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw3ibfhd0x86n"
+path="res://.godot/imported/Kit_Window_Upper_Straight.obj-3f417d8e35917e0426fe7644d3eee562.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Kit_Window_Upper_Straight.obj-3f417d8e35917e0426fe7644d3eee562.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Kit_Window_Upper_Straight.obj"
+dest_files=["res://.godot/imported/Kit_Window_Upper_Straight.obj-3f417d8e35917e0426fe7644d3eee562.mesh", "res://.godot/imported/Kit_Window_Upper_Straight.obj-3f417d8e35917e0426fe7644d3eee562.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

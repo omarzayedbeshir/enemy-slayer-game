@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cb5pf1d2x2dh8"
+path="res://.godot/imported/tree-large.obj-8013b2567a6cf4463235dcea7085e02c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tree-large.obj-8013b2567a6cf4463235dcea7085e02c.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/tree-large.obj"
+dest_files=["res://.godot/imported/tree-large.obj-8013b2567a6cf4463235dcea7085e02c.mesh", "res://.godot/imported/tree-large.obj-8013b2567a6cf4463235dcea7085e02c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

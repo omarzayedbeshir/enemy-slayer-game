@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crv7m8elqwyak"
+path="res://.godot/imported/flag-pennant.obj-148e6343a502e3ed014e8cd73c9b428d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flag-pennant.obj-148e6343a502e3ed014e8cd73c9b428d.mesh"]
+
+source_file="res://Game Resources/Assets/kenney_castle-kit/Models/OBJ format/flag-pennant.obj"
+dest_files=["res://.godot/imported/flag-pennant.obj-148e6343a502e3ed014e8cd73c9b428d.mesh", "res://.godot/imported/flag-pennant.obj-148e6343a502e3ed014e8cd73c9b428d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

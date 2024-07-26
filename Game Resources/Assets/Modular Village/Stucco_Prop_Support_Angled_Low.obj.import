@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfvgschu0kovu"
+path="res://.godot/imported/Stucco_Prop_Support_Angled_Low.obj-df4e171ea7d8e728bb2d0364825e160c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stucco_Prop_Support_Angled_Low.obj-df4e171ea7d8e728bb2d0364825e160c.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Stucco_Prop_Support_Angled_Low.obj"
+dest_files=["res://.godot/imported/Stucco_Prop_Support_Angled_Low.obj-df4e171ea7d8e728bb2d0364825e160c.mesh", "res://.godot/imported/Stucco_Prop_Support_Angled_Low.obj-df4e171ea7d8e728bb2d0364825e160c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

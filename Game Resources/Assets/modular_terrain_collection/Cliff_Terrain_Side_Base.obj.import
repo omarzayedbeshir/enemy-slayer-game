@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c7e823v07of0r"
+path="res://.godot/imported/Cliff_Terrain_Side_Base.obj-f71c2b14f68a0b1d0568cd3d9e2114cb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cliff_Terrain_Side_Base.obj-f71c2b14f68a0b1d0568cd3d9e2114cb.mesh"]
+
+source_file="res://Game Resources/Assets/modular_terrain_collection/Cliff_Terrain_Side_Base.obj"
+dest_files=["res://.godot/imported/Cliff_Terrain_Side_Base.obj-f71c2b14f68a0b1d0568cd3d9e2114cb.mesh", "res://.godot/imported/Cliff_Terrain_Side_Base.obj-f71c2b14f68a0b1d0568cd3d9e2114cb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

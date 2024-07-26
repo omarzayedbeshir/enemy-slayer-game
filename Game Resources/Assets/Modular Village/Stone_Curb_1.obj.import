@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bbls3tk2rwnp3"
+path="res://.godot/imported/Stone_Curb_1.obj-cfedac89ef4b8d4c63e1509f0ae18244.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stone_Curb_1.obj-cfedac89ef4b8d4c63e1509f0ae18244.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Stone_Curb_1.obj"
+dest_files=["res://.godot/imported/Stone_Curb_1.obj-cfedac89ef4b8d4c63e1509f0ae18244.mesh", "res://.godot/imported/Stone_Curb_1.obj-cfedac89ef4b8d4c63e1509f0ae18244.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

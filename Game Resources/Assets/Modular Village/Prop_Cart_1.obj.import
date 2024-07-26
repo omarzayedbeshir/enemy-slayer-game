@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cb8f0djxon8hx"
+path="res://.godot/imported/Prop_Cart_1.obj-ebd8ac7ac38d70d35aea00f43fed17ba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Cart_1.obj-ebd8ac7ac38d70d35aea00f43fed17ba.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Prop_Cart_1.obj"
+dest_files=["res://.godot/imported/Prop_Cart_1.obj-ebd8ac7ac38d70d35aea00f43fed17ba.mesh", "res://.godot/imported/Prop_Cart_1.obj-ebd8ac7ac38d70d35aea00f43fed17ba.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

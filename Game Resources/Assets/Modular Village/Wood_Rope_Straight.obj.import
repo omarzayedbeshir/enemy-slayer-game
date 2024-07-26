@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfwnyeiys0ums"
+path="res://.godot/imported/Wood_Rope_Straight.obj-b123ded3c5b88297e68e0e60b7cc7409.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Rope_Straight.obj-b123ded3c5b88297e68e0e60b7cc7409.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Wood_Rope_Straight.obj"
+dest_files=["res://.godot/imported/Wood_Rope_Straight.obj-b123ded3c5b88297e68e0e60b7cc7409.mesh", "res://.godot/imported/Wood_Rope_Straight.obj-b123ded3c5b88297e68e0e60b7cc7409.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

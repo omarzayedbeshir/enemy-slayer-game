@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c03vf3r1op7n2"
+path="res://.godot/imported/Stone_Steps_Side_2.obj-ae92de21a719383517f30e02147df85a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stone_Steps_Side_2.obj-ae92de21a719383517f30e02147df85a.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Stone_Steps_Side_2.obj"
+dest_files=["res://.godot/imported/Stone_Steps_Side_2.obj-ae92de21a719383517f30e02147df85a.mesh", "res://.godot/imported/Stone_Steps_Side_2.obj-ae92de21a719383517f30e02147df85a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://da5xah28nt6qf"
+path="res://.godot/imported/Roof_Convex_Side_Edge.obj-24495858afbc529476037bf189952aca.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Convex_Side_Edge.obj-24495858afbc529476037bf189952aca.mesh"]
+
+source_file="res://Game Resources/Assets/Modular Village/Roof_Convex_Side_Edge.obj"
+dest_files=["res://.godot/imported/Roof_Convex_Side_Edge.obj-24495858afbc529476037bf189952aca.mesh", "res://.godot/imported/Roof_Convex_Side_Edge.obj-24495858afbc529476037bf189952aca.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
