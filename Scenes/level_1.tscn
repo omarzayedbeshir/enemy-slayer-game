@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=4 format=3 uid="uid://ciff3h2bevdk5"]
+
+[ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_syv4x"]
 size = Vector2(100, 100)
@@ -15,3 +17,9 @@ mesh = SubResource("PlaneMesh_syv4x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_203cm")
+
+[node name="Player" parent="." instance=ExtResource("1_qxaud")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0139797, 0.999902, 0, -0.999902, 0.0139797, 0, 5.8105, 0)
+shadow_enabled = true
