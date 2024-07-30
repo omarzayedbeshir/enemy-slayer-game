@@ -28,3 +28,8 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_animation_tree_animation_finished(anim_name):
+	if anim_name == "1H_Melee_Attack_Slice_Diagonal":
+		$PlayerStateMachine/SwordSwingPlayerState.transition("IdlePlayerState")

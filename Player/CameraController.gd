@@ -28,7 +28,7 @@ func _input(event):
 				$h/v.spring_length += 0.1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	camroot_v = clamp(camroot_v,deg_to_rad(cam_v_min), deg_to_rad(cam_v_max))
 	$h.rotation.y = camroot_h
 	$h/v.rotation.x = camroot_v
