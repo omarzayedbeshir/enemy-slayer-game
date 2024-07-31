@@ -4,6 +4,8 @@ extends State
 
 
 func update(delta):
+	PlayerManager.player.velocity.x = PlayerManager.player.direction.x * PlayerManager.player.SPEED
+	PlayerManager.player.velocity.z = PlayerManager.player.direction.z * PlayerManager.player.SPEED
 	if PlayerManager.player.direction:
 		PlayerManager.player.get_node("Rogue_Hooded").rotation.y = lerp_angle(PlayerManager.player.get_node("Rogue_Hooded").rotation.y, atan2(PlayerManager.player.direction.x, PlayerManager.player.direction.z), delta * 10) 
 	PlayerManager.player.get_node("AnimationTree")["parameters/playback"].travel("Running_A")

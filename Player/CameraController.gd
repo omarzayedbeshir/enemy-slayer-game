@@ -16,7 +16,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventMouseMotion:
-		camroot_h += event.relative.x * h_sensitivity
+		camroot_h -= event.relative.x * h_sensitivity
 		camroot_v += event.relative.y * v_sensitivity
 	
 	if event is InputEventMouseButton:

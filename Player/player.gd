@@ -22,16 +22,18 @@ func _physics_process(delta):
 	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var h_rot = $camroot/h.rotation.y
 	direction = direction.rotated(Vector3.UP, h_rot).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
 
 
 func _on_animation_tree_animation_finished(anim_name):
 	if anim_name == "1H_Melee_Attack_Slice_Diagonal":
-		$PlayerStateMachine/SwordSwingPlayerState.transition("IdlePlayerState")
+		$PlayerStateMachine/SwordSwingPlayerState.transition.emit("IdlePlayerState")
+	if anim_name == "Block_Attack":
+		$PlayerStateMachine/BlockPlayerState.transition.emit("IdlePlayerState")
+	if anim_name == "Dodge_Backward":
+		$PlayerStateMachine/DodgeBackwardPlayerState.transition.emit("IdlePlayerState")
+	if anim_name == "Dodge_Left":
+		$PlayerStateMachine/DodgeLeftPlayerState.transition.emit("IdlePlayerState")
+	if anim_name == "Dodge_Right":
+		$PlayerStateMachine/DodgeRightPlayerState.transition.emit("IdlePlayerState")
