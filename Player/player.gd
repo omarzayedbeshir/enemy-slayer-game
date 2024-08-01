@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
-
+var health = 100
+var energy = 100
 const SPEED = 5.0
 const JUMP_VELOCITY = 9.0
 var direction
@@ -11,6 +12,13 @@ func _ready():
 	PlayerManager.player = self
 
 func _physics_process(delta):
+	var health_bar_dimensions = Rect2(0, 0, health / 100.0 * 560, 85)
+	$ProgressUI/Control/HealthBar.region_rect = health_bar_dimensions
+	print(energy)
+	$ProgressUI/EnergyProgressBar.value = int(energy) + 1
+	energy -= delta * 0.2
+	if energy <= 0 or health <= 0:
+		get_tree().quit()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
