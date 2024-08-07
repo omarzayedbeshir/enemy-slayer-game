@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=6 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
 [ext_resource type="PackedScene" uid="uid://crmurxh33smj5" path="res://Scenes/health_booster.tscn" id="2_3fm3g"]
+[ext_resource type="PackedScene" uid="uid://cr4labpfi5bua" path="res://Scenes/enemy.tscn" id="3_6expb"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_syv4x"]
 size = Vector2(100, 100)
@@ -27,3 +28,6 @@ shadow_enabled = true
 
 [node name="HealthBooster" parent="." instance=ExtResource("2_3fm3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34654, 7.10504)
+
+[node name="Enemy" parent="." instance=ExtResource("3_6expb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 21.119)
