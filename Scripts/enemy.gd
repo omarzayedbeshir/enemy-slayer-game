@@ -1,10 +1,12 @@
 extends CharacterBody3D
 
+@export var patrol = false
 var see_player = false
 var attack_player = false
 var SPEED = 2.0
 var health = 12
 var direction
+var forward = true
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var mesh = $Barbarian
 @onready var anim = $Barbarian/AnimationPlayer
@@ -18,7 +20,7 @@ func _process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	var player = PlayerManager.player
-	var direction = (player.position - position).normalized()
+	direction = (player.position - position).normalized()
 	if see_player:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -30,9 +32,21 @@ func _process(delta):
 		anim.play("1H_Melee_Attack_Slice_Diagonal")
 		mesh.rotation.y = lerp_angle(mesh.rotation.y, atan2(direction.x, direction.z), delta * 10)		
 	else:
-		velocity.x = 0
-		velocity.z = 0
-		anim.play("Idle")		
+		if patrol:
+			if forward:
+				mesh.rotation = Vector3(0, -0.5 * PI, 0)
+				velocity.x = -SPEED
+				velocity.z = 0
+				anim.play("Running_A")
+			else:
+				mesh.rotation = Vector3(0, 0.5 * PI, 0)
+				velocity.x = SPEED
+				velocity.z = 0
+				anim.play("Running_A")
+		else:
+			velocity.x = 0
+			velocity.z = 0
+			anim.play("Idle")
 	move_and_slide()
 
 
@@ -56,3 +70,7 @@ func _on_attack_player_body_exited(body):
 	if body.name == "Player":
 		attack_player = false
 		see_player = true
+
+
+func _on_timer_timeout():
+	forward = !forward

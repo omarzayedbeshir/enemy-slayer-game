@@ -31,3 +31,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34654, 7.10504)
 
 [node name="Enemy" parent="." instance=ExtResource("3_6expb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 21.119)
+patrol = true
