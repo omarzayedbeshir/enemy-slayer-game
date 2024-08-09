@@ -11,6 +11,7 @@ var forward = true
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var mesh = $Barbarian
 @onready var anim = $Barbarian/AnimationPlayer
+var previous_position
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -27,10 +28,14 @@ func _process(delta):
 	var player = PlayerManager.player
 	direction = (player.position - position).normalized()
 	if see_player:
+		if previous_position and is_on_floor():
+			if previous_position.distance_to(position) < 0.03:
+				velocity.y = 5
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 		anim.play("Running_A")
 		mesh.rotation.y = lerp_angle(mesh.rotation.y, atan2(direction.x, direction.z), delta * 10)
+		previous_position = position
 	elif attack_player:
 		velocity.x = 0
 		velocity.z = 0

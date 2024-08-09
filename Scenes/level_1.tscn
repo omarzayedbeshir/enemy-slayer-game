@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=8 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
 [ext_resource type="PackedScene" uid="uid://crmurxh33smj5" path="res://Scenes/health_booster.tscn" id="2_3fm3g"]
@@ -9,6 +9,10 @@ size = Vector2(100, 100)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_203cm"]
 data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jsxc4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ssayy"]
 
 [node name="level_1" type="Node3D"]
 
@@ -32,3 +36,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34654, 7.10504)
 [node name="Enemy" parent="." instance=ExtResource("3_6expb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 21.119)
 patrol = true
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.458822, 12.9394)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_jsxc4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_ssayy")
