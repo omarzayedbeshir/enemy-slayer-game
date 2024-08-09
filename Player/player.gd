@@ -3,6 +3,7 @@ extends CharacterBody3D
 var health = 100
 var energy = 100
 const SPEED = 5.0
+var new_hit = true
 const JUMP_VELOCITY = 9.0
 var direction
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -14,7 +15,6 @@ func _ready():
 func _physics_process(delta):
 	var health_bar_dimensions = Rect2(0, 0, health / 100.0 * 560, 85)
 	$ProgressUI/Control/HealthBar.region_rect = health_bar_dimensions
-	print(energy)
 	$ProgressUI/EnergyProgressBar.value = int(energy) + 1
 	energy -= delta * 0.2
 	if energy <= 0 or health <= 0:

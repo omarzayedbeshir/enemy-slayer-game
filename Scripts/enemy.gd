@@ -3,6 +3,7 @@ extends CharacterBody3D
 @export var patrol = false
 var see_player = false
 var attack_player = false
+var new_hit = true
 var SPEED = 2.0
 var health = 12
 var direction
@@ -17,6 +18,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$SubViewport/HealthBar3D.value = health
+	if health <= 0:
+		anim.play("Death_A")
+		await anim.animation_finished
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	var player = PlayerManager.player
@@ -74,3 +79,10 @@ func _on_attack_player_body_exited(body):
 
 func _on_timer_timeout():
 	forward = !forward
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "Death_A":
+		queue_free()
+	elif anim_name == "1H_Melee_Attack_Slice_Diagonal":
+		new_hit = true
