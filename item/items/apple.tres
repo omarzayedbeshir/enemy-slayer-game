@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c0k43uyiv3vbr"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_vu3y7"]
+[ext_resource type="Texture2D" uid="uid://crxueqdvjtdwf" path="res://Game Resources/Assets/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="2_h7quo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee2a2"]
+atlas = ExtResource("2_h7quo")
+region = Rect2(0, 448, 32, 32)
+
+[resource]
+script = ExtResource("1_vu3y7")
+name = "تفاح"
+description = "تفاح لذيذ يقوم بتزويد الطاقة"
+texture = SubResource("AtlasTexture_ee2a2")

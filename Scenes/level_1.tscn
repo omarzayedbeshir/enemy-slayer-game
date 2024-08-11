@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=9 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
 [ext_resource type="PackedScene" uid="uid://crmurxh33smj5" path="res://Scenes/health_booster.tscn" id="2_3fm3g"]
 [ext_resource type="PackedScene" uid="uid://cr4labpfi5bua" path="res://Scenes/enemy.tscn" id="3_6expb"]
+[ext_resource type="PackedScene" uid="uid://dj1c7jt15peq5" path="res://inventory/inventory.tscn" id="4_ecvju"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_syv4x"]
 size = Vector2(100, 100)
@@ -45,3 +46,20 @@ shape = SubResource("BoxShape3D_jsxc4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
 mesh = SubResource("BoxMesh_ssayy")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InventoryInterface" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("4_ecvju")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
