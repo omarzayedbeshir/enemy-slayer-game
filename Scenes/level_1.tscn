@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=12 format=3 uid="uid://ciff3h2bevdk5"]
 
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_bvlx5"]
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
 [ext_resource type="PackedScene" uid="uid://crmurxh33smj5" path="res://Scenes/health_booster.tscn" id="2_3fm3g"]
 [ext_resource type="PackedScene" uid="uid://cr4labpfi5bua" path="res://Scenes/enemy.tscn" id="3_6expb"]
+[ext_resource type="Resource" uid="uid://b72cg3u5ecnfw" path="res://test_inv.tres" id="3_hlc51"]
 [ext_resource type="PackedScene" uid="uid://dj1c7jt15peq5" path="res://inventory/inventory.tscn" id="4_ecvju"]
+[ext_resource type="Script" path="res://inventory/inventory_interface.gd" id="6_6clqc"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_syv4x"]
 size = Vector2(100, 100)
@@ -16,6 +19,7 @@ data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0,
 [sub_resource type="BoxMesh" id="BoxMesh_ssayy"]
 
 [node name="level_1" type="Node3D"]
+script = ExtResource("1_bvlx5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_syv4x")
@@ -26,6 +30,7 @@ mesh = SubResource("PlaneMesh_syv4x")
 shape = SubResource("ConcavePolygonShape3D_203cm")
 
 [node name="Player" parent="." instance=ExtResource("1_qxaud")]
+inventory_data = ExtResource("3_hlc51")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0139797, 0.999902, 0, -0.999902, 0.0139797, 0, 5.8105, 0)
@@ -56,6 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("6_6clqc")
 
 [node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("4_ecvju")]
 layout_mode = 0

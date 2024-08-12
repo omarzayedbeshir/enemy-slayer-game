@@ -5,6 +5,7 @@ var energy = 100
 const SPEED = 5.0
 var new_hit = true
 const JUMP_VELOCITY = 9.0
+@export var inventory_data: InventoryData
 var direction
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
