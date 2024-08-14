@@ -15,7 +15,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		camroot_h -= event.relative.x * h_sensitivity
 		camroot_v += event.relative.y * v_sensitivity
 	

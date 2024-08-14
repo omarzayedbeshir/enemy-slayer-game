@@ -7,6 +7,7 @@ var new_hit = true
 const JUMP_VELOCITY = 9.0
 @export var inventory_data: InventoryData
 var direction
+signal toggle_inventory()
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -34,7 +35,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("Inventory"):
+		toggle_inventory.emit()
+	
 func _on_animation_tree_animation_finished(anim_name):
 	if anim_name == "1H_Melee_Attack_Slice_Diagonal":
 		$PlayerStateMachine/SwordSwingPlayerState.transition.emit("IdlePlayerState")

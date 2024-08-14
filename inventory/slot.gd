@@ -12,4 +12,4 @@ func set_slot_data(slot_data: SlotData):
 	else:
 		quantity_label.hide()
 	
-	tooltip_text = item_data.name + "/n" + item_data.description
+	tooltip_text = item_data.name + "\n" + item_data.description
