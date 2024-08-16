@@ -4,4 +4,7 @@ extends State
 
 
 func update(_delta):
-	PlayerManager.player.get_node("AnimationTree")["parameters/playback"].travel("Block_Attack")
+	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+		transition.emit("IdlePlayerState")
+	else:
+		PlayerManager.player.get_node("AnimationTree")["parameters/playback"].travel("Block_Attack")

@@ -4,10 +4,16 @@ extends State
 
 
 func enter():
-	PlayerManager.player.new_hit = true
-	PlayerManager.player.get_node("Audio/SwordAudio").playing = true
-	PlayerManager.player.get_node("AnimationTree")["parameters/playback"].travel("1H_Melee_Attack_Slice_Diagonal")
+	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+		transition.emit("IdlePlayerState")
+	else:
+		PlayerManager.player.new_hit = true
+		PlayerManager.player.get_node("Audio/SwordAudio").playing = true
+		PlayerManager.player.get_node("AnimationTree")["parameters/playback"].travel("1H_Melee_Attack_Slice_Diagonal")
 	
 func update(_delta):
-	PlayerManager.player.velocity.x = 0
-	PlayerManager.player.velocity.z = 0
+	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+		transition.emit("IdlePlayerState")
+	else:
+		PlayerManager.player.velocity.x = 0
+		PlayerManager.player.velocity.z = 0
