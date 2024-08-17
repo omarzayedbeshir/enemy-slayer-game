@@ -8,6 +8,8 @@ const JUMP_VELOCITY = 9.0
 @export var inventory_data: InventoryData
 var direction
 signal toggle_inventory()
+@onready var interact_ray = $Rogue_Hooded/InteractRay
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -38,6 +40,8 @@ func _physics_process(delta):
 func _unhandled_input(event):
 	if Input.is_action_just_pressed("Inventory"):
 		toggle_inventory.emit()
+	elif Input.is_action_just_pressed("Interact"):
+		interact()
 	
 func _on_animation_tree_animation_finished(anim_name):
 	if anim_name == "1H_Melee_Attack_Slice_Diagonal":
@@ -50,3 +54,7 @@ func _on_animation_tree_animation_finished(anim_name):
 		$PlayerStateMachine/DodgeLeftPlayerState.transition.emit("IdlePlayerState")
 	if anim_name == "Dodge_Right":
 		$PlayerStateMachine/DodgeRightPlayerState.transition.emit("IdlePlayerState")
+
+func interact():
+	if interact_ray.is_colliding():
+		interact_ray.get_collider().player_interact()

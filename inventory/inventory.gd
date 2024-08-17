@@ -19,3 +19,6 @@ func populate_item_grid(inventory_data: InventoryData):
 func set_inventory_data(inventory_data: InventoryData):
 	inventory_data.inventory_updated.connect(populate_item_grid)
 	populate_item_grid(inventory_data)
+
+func clear_inventory_data(inventory_data: InventoryData):
+	inventory_data.inventory_updated.disconnect(populate_item_grid)
