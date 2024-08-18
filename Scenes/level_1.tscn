@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=21 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_bvlx5"]
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://inventory/inventory_data.gd" id="10_afqj1"]
 [ext_resource type="Resource" uid="uid://c0k43uyiv3vbr" path="res://item/items/apple.tres" id="11_nxrom"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="12_mpkc8"]
+[ext_resource type="PackedScene" uid="uid://dbqpld24fy8pa" path="res://item/pick_up.tscn" id="13_aqb3l"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_syv4x"]
 size = Vector2(100, 100)
@@ -31,6 +32,11 @@ quantity = 5
 [sub_resource type="Resource" id="Resource_x3y3p"]
 script = ExtResource("10_afqj1")
 slot_datas = Array[ExtResource("12_mpkc8")]([SubResource("Resource_pcv8q"), null, null, null, null])
+
+[sub_resource type="Resource" id="Resource_d7q8o"]
+script = ExtResource("12_mpkc8")
+item_data = ExtResource("11_nxrom")
+quantity = 1
 
 [node name="level_1" type="Node3D"]
 script = ExtResource("1_bvlx5")
@@ -104,3 +110,11 @@ offset_bottom = 64.0
 [node name="Chest" parent="." instance=ExtResource("9_78xr3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.20783)
 inventory_data = SubResource("Resource_x3y3p")
+
+[node name="PickUp" parent="." instance=ExtResource("13_aqb3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.726543, 2.49997)
+slot_data = SubResource("Resource_d7q8o")
+
+[connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
+[connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
+[connection signal="visibility_changed" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_visibility_changed"]

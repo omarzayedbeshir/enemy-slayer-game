@@ -6,6 +6,7 @@ var grabbed_slot_data
 var external_inventory_owner
 @onready var external_inventory = $ExternalInventory
 signal force_close
+signal drop_slot_data(slot_data)
 
 func _physics_process(delta):
 	if grabbed_slot.visible:
@@ -53,3 +54,23 @@ func clear_external_inventory():
 		external_inventory.clear_inventory_data(inventory_data)
 		external_inventory.hide()
 		external_inventory_owner = null
+
+
+func _on_gui_input(event):
+	if event is InputEventMouseButton and event.is_pressed() and grabbed_slot_data:
+		match event.button_index:
+			MOUSE_BUTTON_LEFT:
+				drop_slot_data.emit(grabbed_slot_data)
+				grabbed_slot_data = null
+			MOUSE_BUTTON_RIGHT:
+				drop_slot_data.emit(grabbed_slot_data.create_single_slot_data())
+				if grabbed_slot_data.quantity < 1:
+					grabbed_slot_data = null
+		update_grabbed_slot()
+
+
+func _on_visibility_changed():
+	if not visible and grabbed_slot_data:
+		drop_slot_data.emit(grabbed_slot_data)
+		grabbed_slot_data = null
+		update_grabbed_slot()

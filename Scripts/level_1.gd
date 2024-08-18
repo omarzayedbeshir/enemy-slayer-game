@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var player = $Player
 @onready var inventory_interface = $UI/InventoryInterface
-
+const PickUp = preload("res://item/pick_up.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inventory_interface.set_player_inventory_data(player.inventory_data)
@@ -22,3 +22,10 @@ func toggle_inventory_interface(external_inventory_owner = null):
 		
 	if not external_inventory_owner:
 		inventory_interface.clear_external_inventory()
+
+
+func _on_inventory_interface_drop_slot_data(slot_data):
+	var pick_up = PickUp.instantiate()
+	pick_up.slot_data = slot_data
+	pick_up.position = PlayerManager.player.get_drop_position()
+	add_child(pick_up)

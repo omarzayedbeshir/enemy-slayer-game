@@ -9,6 +9,7 @@ const JUMP_VELOCITY = 9.0
 var direction
 signal toggle_inventory()
 @onready var interact_ray = $Rogue_Hooded/InteractRay
+@onready var player_mesh = $Rogue_Hooded
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -58,3 +59,6 @@ func _on_animation_tree_animation_finished(anim_name):
 func interact():
 	if interact_ray.is_colliding():
 		interact_ray.get_collider().player_interact()
+
+func get_drop_position():
+	return player_mesh.global_position + player_mesh.global_transform.basis.z + Vector3.UP
