@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemDataHeal" load_steps=4 format=3 uid="uid://fmpqujqkrfkp"]
+
+[ext_resource type="Script" path="res://item/item_data_heal.gd" id="1_5gd88"]
+[ext_resource type="Texture2D" uid="uid://crxueqdvjtdwf" path="res://Game Resources/Assets/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="2_vygtw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu2vh"]
+atlas = ExtResource("2_vygtw")
+region = Rect2(0, 288, 32, 32)
+
+[resource]
+script = ExtResource("1_5gd88")
+name = "المشروب الأحمر"
+description = "المشروب الأحمر يقوم بتزويد صحتك"
+texture = SubResource("AtlasTexture_bu2vh")

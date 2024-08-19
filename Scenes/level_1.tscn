@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2qax7mstjel" path="res://inventory/slot.tscn" id="8_yrcss"]
 [ext_resource type="PackedScene" uid="uid://blqgispjr7stt" path="res://Interactables/chest.tscn" id="9_78xr3"]
 [ext_resource type="Script" path="res://inventory/inventory_data.gd" id="10_afqj1"]
-[ext_resource type="Resource" uid="uid://c0k43uyiv3vbr" path="res://item/items/apple.tres" id="11_nxrom"]
+[ext_resource type="Resource" uid="uid://dkpo2gv4nwrcu" path="res://item/items/energize_apple.tres" id="11_le50e"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="12_mpkc8"]
 [ext_resource type="PackedScene" uid="uid://dbqpld24fy8pa" path="res://item/pick_up.tscn" id="13_aqb3l"]
 
@@ -26,7 +26,7 @@ data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0,
 
 [sub_resource type="Resource" id="Resource_pcv8q"]
 script = ExtResource("12_mpkc8")
-item_data = ExtResource("11_nxrom")
+item_data = ExtResource("11_le50e")
 quantity = 5
 
 [sub_resource type="Resource" id="Resource_x3y3p"]
@@ -35,7 +35,7 @@ slot_datas = Array[ExtResource("12_mpkc8")]([SubResource("Resource_pcv8q"), null
 
 [sub_resource type="Resource" id="Resource_d7q8o"]
 script = ExtResource("12_mpkc8")
-item_data = ExtResource("11_nxrom")
+item_data = ExtResource("11_le50e")
 quantity = 1
 
 [node name="level_1" type="Node3D"]

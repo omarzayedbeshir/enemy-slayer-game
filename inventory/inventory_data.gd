@@ -57,3 +57,15 @@ func pick_up_slot_data(slot_data):
 			inventory_updated.emit(self)
 			return true
 	return false
+
+func use_slot_data(index):
+	var slot_data = slot_datas[index]
+	if not slot_data:
+		return
+	if PlayerManager.player.can_use_item(slot_data.item_data):
+		slot_data.quantity -= 1
+		if slot_data.quantity < 1:
+			slot_datas[index] = null
+		
+		PlayerManager.use_slot_data(slot_data)
+		inventory_updated.emit(self)

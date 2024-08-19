@@ -62,3 +62,22 @@ func interact():
 
 func get_drop_position():
 	return player_mesh.global_position + player_mesh.global_transform.basis.z + Vector3.UP
+
+func heal():
+	health += 10
+	if health > 100:
+		health = 100
+
+func can_use_item(item_type):
+	if item_type is ItemDataHeal:
+		if health >= 100:
+			return false
+	if item_type is ItemDataEnergize:
+		if energy >= 95:
+			return false
+	return true
+
+func energize():
+	energy += 10
+	if energy > 100:
+		energy = 100
