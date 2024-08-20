@@ -3,8 +3,11 @@ extends Node3D
 @onready var player = $Player
 @onready var inventory_interface = $UI/InventoryInterface
 const PickUp = preload("res://item/pick_up.tscn")
+@onready var hot_bar_inventory = $UI/HotBarInventory
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	hot_bar_inventory.set_inventory_data(player.inventory_data)
 	inventory_interface.set_player_inventory_data(player.inventory_data)
 	player.toggle_inventory.connect(toggle_inventory_interface)
 	inventory_interface.force_close.connect(toggle_inventory_interface)
@@ -14,8 +17,10 @@ func _ready():
 func toggle_inventory_interface(external_inventory_owner = null):
 	inventory_interface.visible = not inventory_interface.visible
 	if inventory_interface.visible:
+		hot_bar_inventory.hide()
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
+		hot_bar_inventory.show()
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if external_inventory_owner and inventory_interface.visible:
 		inventory_interface.set_external_inventory(external_inventory_owner)

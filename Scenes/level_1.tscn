@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=22 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_bvlx5"]
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://inventory/inventory_interface.gd" id="6_6clqc"]
 [ext_resource type="PackedScene" uid="uid://cj2qax7mstjel" path="res://inventory/slot.tscn" id="8_yrcss"]
 [ext_resource type="PackedScene" uid="uid://blqgispjr7stt" path="res://Interactables/chest.tscn" id="9_78xr3"]
+[ext_resource type="PackedScene" uid="uid://b5ii8xmiiyafh" path="res://inventory/hot_bar_inventory.tscn" id="9_cn7eg"]
 [ext_resource type="Script" path="res://inventory/inventory_data.gd" id="10_afqj1"]
 [ext_resource type="Resource" uid="uid://dkpo2gv4nwrcu" path="res://item/items/energize_apple.tres" id="11_le50e"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="12_mpkc8"]
@@ -106,6 +107,19 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+
+[node name="HotBarInventory" parent="UI" instance=ExtResource("9_cn7eg")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -80.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="Chest" parent="." instance=ExtResource("9_78xr3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.20783)
