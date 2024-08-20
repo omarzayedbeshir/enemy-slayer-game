@@ -10,7 +10,7 @@ signal drop_slot_data(slot_data)
 
 func _physics_process(delta):
 	if grabbed_slot.visible:
-		grabbed_slot.global_position = get_global_mouse_position() + Vector2(5, 5)
+		grabbed_slot.global_position = get_global_mouse_position() + Vector2(35, 35)
 	if external_inventory_owner and external_inventory_owner.global_position.distance_to(PlayerManager.get_global_position()) > 4:
 		force_close.emit()		
 func set_player_inventory_data(inventory_data: InventoryData):

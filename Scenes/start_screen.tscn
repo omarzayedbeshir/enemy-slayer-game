@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://banui2iuqqjou"]
+
+[ext_resource type="Script" path="res://Scripts/start_screen.gd" id="1_86vvs"]
+[ext_resource type="Texture2D" uid="uid://1gd3hs426ot" path="res://Game Resources/Assets/free-sky-with-clouds-background-pixel-art-set/Clouds/Clouds 7/1.png" id="1_umjmw"]
+
+[node name="StartScreen" type="CanvasLayer"]
+script = ExtResource("1_86vvs")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_umjmw")
+
+[node name="GameLabel" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.5
+offset_top = -188.0
+offset_right = 237.5
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 100
+text = "قاهر الأعداء"
+
+[node name="Start" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.5
+offset_top = -31.5
+offset_right = 74.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "هيا نحارب"
+
+[node name="End" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = 57.0
+offset_right = 59.5
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "إغلاق"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="End" to="." method="_on_end_pressed"]

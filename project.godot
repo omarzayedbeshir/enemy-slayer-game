@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="enemy_slayer"
-run/main_scene="res://Scenes/level_1.tscn"
+run/main_scene="res://Scenes/start_screen.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 PlayerManager="*res://Player/player_manager.gd"
+
+[display]
+
+mouse_cursor/custom_image="res://Game Resources/Assets/WenrexaAssetsMagicCursorsPack/Assets Magic Cursors Pack/Cursor/Cursor Default.png"
 
 [input]
 

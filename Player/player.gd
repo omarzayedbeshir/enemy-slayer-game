@@ -23,7 +23,7 @@ func _physics_process(delta):
 	$ProgressUI/EnergyProgressBar.value = int(energy) + 1
 	energy -= delta * 0.2
 	if energy <= 0 or health <= 0:
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta

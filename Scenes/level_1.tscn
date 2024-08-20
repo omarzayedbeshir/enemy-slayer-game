@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=23 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_bvlx5"]
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://dkpo2gv4nwrcu" path="res://item/items/energize_apple.tres" id="11_le50e"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="12_mpkc8"]
 [ext_resource type="PackedScene" uid="uid://dbqpld24fy8pa" path="res://item/pick_up.tscn" id="13_aqb3l"]
+[ext_resource type="PackedScene" uid="uid://cq86gihnhln0j" path="res://Scenes/pause_menu.tscn" id="15_xl52o"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_syv4x"]
 size = Vector2(100, 100)
@@ -128,6 +129,9 @@ inventory_data = SubResource("Resource_x3y3p")
 [node name="PickUp" parent="." instance=ExtResource("13_aqb3l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.726543, 2.49997)
 slot_data = SubResource("Resource_d7q8o")
+
+[node name="PauseMenu" parent="." instance=ExtResource("15_xl52o")]
+visible = false
 
 [connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
 [connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
