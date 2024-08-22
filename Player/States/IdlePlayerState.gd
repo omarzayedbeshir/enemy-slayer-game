@@ -16,7 +16,9 @@ func update(_delta):
 		transition.emit("RunPlayerState")
 	elif PlayerManager.player.is_on_floor() and Input.is_action_just_pressed("Jump"):
 		transition.emit("JumpPlayerState")
-	elif Input.is_action_just_pressed("Attack") and PlayerManager.player.is_on_floor():
+	elif Input.is_action_just_pressed("Attack") and PlayerManager.player.is_on_floor() and PlayerManager.player.current_weapon == "sword":
 		transition.emit("SwordSwingPlayerState")
+	elif Input.is_action_just_pressed("Attack") and PlayerManager.player.is_on_floor() and PlayerManager.player.current_weapon == "anvil":
+		transition.emit("AnvilSwingPlayerState")
 	elif Input.is_action_just_pressed("Block") and PlayerManager.player.is_on_floor():
 		transition.emit("BlockPlayerState")

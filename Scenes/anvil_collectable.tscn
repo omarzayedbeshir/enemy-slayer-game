@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcdmo8dl3i8u5"]
+
+[ext_resource type="PackedScene" uid="uid://cr5t23u171fwm" path="res://Game Resources/Assets/Low Poly Weapon Pack - by Kickin It Studios/Low Poly Weapon Pack - by Kickin It Studios/Anvil.fbx" id="1_xoahg"]
+[ext_resource type="Script" path="res://Scripts/anvil_collectable.gd" id="1_yhikk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixfow"]
+size = Vector3(1, 0.247923, 2.5855)
+
+[node name="AnvilCollectable" type="Node3D"]
+script = ExtResource("1_yhikk")
+
+[node name="Anvil" parent="." instance=ExtResource("1_xoahg")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.406856)
+shape = SubResource("BoxShape3D_ixfow")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

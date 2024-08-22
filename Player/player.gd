@@ -4,9 +4,13 @@ var health = 100
 var energy = 100
 const SPEED = 5.0
 var new_hit = true
+var found_anvil = false
+var found_crossbow = false
+var found_staff = false
 const JUMP_VELOCITY = 9.0
 @export var inventory_data: InventoryData
 var direction
+var current_weapon = "sword"
 signal toggle_inventory()
 @onready var interact_ray = $Rogue_Hooded/InteractRay
 @onready var player_mesh = $Rogue_Hooded
@@ -43,6 +47,28 @@ func _unhandled_input(event):
 		toggle_inventory.emit()
 	elif Input.is_action_just_pressed("Interact"):
 		interact()
+	elif Input.is_action_just_pressed("toggle_sword"):
+		hide_weapons()
+		$Rogue_Hooded/Rig/Skeleton3D/Knife.show()
+	elif Input.is_action_just_pressed("toggle_anvil") and found_anvil:
+		hide_weapons()
+		current_weapon = "anvil"
+		$Rogue_Hooded/Rig/Skeleton3D/Anvil.show()
+	elif Input.is_action_just_pressed("toggle_crossbow") and found_crossbow:
+		hide_weapons()
+		current_weapon = "crossbow"
+		$"Rogue_Hooded/Rig/Skeleton3D/1H_Crossbow".show()
+	elif Input.is_action_just_pressed("toggle_staff") and found_staff:
+		hide_weapons()
+		current_weapon = "staff"
+		$Rogue_Hooded/Rig/Skeleton3D/Staff.show()
+	
+func hide_weapons():
+	$Rogue_Hooded/Rig/Skeleton3D/Knife.hide()
+	$Rogue_Hooded/Rig/Skeleton3D/Anvil.hide()
+	$"Rogue_Hooded/Rig/Skeleton3D/1H_Crossbow".hide()
+	$Rogue_Hooded/Rig/Skeleton3D/Staff.hide()
+	
 	
 func _on_animation_tree_animation_finished(anim_name):
 	if anim_name == "1H_Melee_Attack_Slice_Diagonal":

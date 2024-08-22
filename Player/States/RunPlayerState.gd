@@ -17,6 +17,9 @@ func update(delta):
 	elif PlayerManager.player.is_on_floor() and Input.is_action_just_pressed("Jump"):
 		PlayerManager.player.get_node("Audio/MoveAudio").playing = false		
 		transition.emit("JumpPlayerState")
-	elif Input.is_action_just_pressed("Attack") and PlayerManager.player.is_on_floor():
+	elif Input.is_action_just_pressed("Attack") and PlayerManager.player.is_on_floor() and PlayerManager.player.current_weapon == "sword":
 		PlayerManager.player.get_node("Audio/MoveAudio").playing = false
 		transition.emit("SwordSwingPlayerState")
+	elif Input.is_action_just_pressed("Attack") and PlayerManager.player.is_on_floor() and PlayerManager.player.current_weapon == "anvil":
+		PlayerManager.player.get_node("Audio/MoveAudio").playing = false
+		transition.emit("AnvilSwingPlayerState")
