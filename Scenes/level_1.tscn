@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=37 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_bvlx5"]
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
@@ -8,8 +8,95 @@
 [ext_resource type="PackedScene" uid="uid://cj2qax7mstjel" path="res://inventory/slot.tscn" id="8_yrcss"]
 [ext_resource type="PackedScene" uid="uid://b5ii8xmiiyafh" path="res://inventory/hot_bar_inventory.tscn" id="9_cn7eg"]
 [ext_resource type="PackedScene" uid="uid://db7wnpq7tld7q" path="res://Scenes/house.tscn" id="10_y6onq"]
+[ext_resource type="Texture2D" uid="uid://dwclgcmpnktlc" path="res://Game Resources/Assets/Sky/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="11_r1vrn"]
+[ext_resource type="PackedScene" uid="uid://cr4labpfi5bua" path="res://Scenes/enemy.tscn" id="12_f5v7m"]
 [ext_resource type="MeshLibrary" uid="uid://5jt0pyk50cvh" path="res://Libraries/MeshLibrary.tres" id="13_axysf"]
+[ext_resource type="PackedScene" uid="uid://crmurxh33smj5" path="res://Scenes/health_booster.tscn" id="13_kaqx6"]
+[ext_resource type="PackedScene" uid="uid://blqgispjr7stt" path="res://Interactables/chest.tscn" id="14_exve0"]
+[ext_resource type="Script" path="res://inventory/inventory_data.gd" id="15_565mn"]
 [ext_resource type="PackedScene" uid="uid://cq86gihnhln0j" path="res://Scenes/pause_menu.tscn" id="15_xl52o"]
+[ext_resource type="Resource" uid="uid://dkpo2gv4nwrcu" path="res://item/items/energize_apple.tres" id="16_hqcod"]
+[ext_resource type="Script" path="res://inventory/slot_data.gd" id="17_rs8b1"]
+[ext_resource type="Resource" uid="uid://fmpqujqkrfkp" path="res://item/items/heal_bottle.tres" id="18_lf44v"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_46fo2"]
+panorama = ExtResource("11_r1vrn")
+
+[sub_resource type="Sky" id="Sky_x52pw"]
+sky_material = SubResource("PanoramaSkyMaterial_46fo2")
+
+[sub_resource type="Environment" id="Environment_kjp7v"]
+background_mode = 2
+sky = SubResource("Sky_x52pw")
+ssil_enabled = true
+ssil_intensity = 2.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_81s0i"]
+
+[sub_resource type="Resource" id="Resource_yi58i"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("16_hqcod")
+quantity = 7
+
+[sub_resource type="Resource" id="Resource_on161"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("18_lf44v")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_aumr4"]
+script = ExtResource("15_565mn")
+slot_datas = Array[ExtResource("17_rs8b1")]([SubResource("Resource_yi58i"), SubResource("Resource_on161"), null, null, null])
+
+[sub_resource type="Resource" id="Resource_76nip"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("16_hqcod")
+quantity = 7
+
+[sub_resource type="Resource" id="Resource_hrq4i"]
+script = ExtResource("15_565mn")
+slot_datas = Array[ExtResource("17_rs8b1")]([SubResource("Resource_76nip"), null, null, null, null])
+
+[sub_resource type="Resource" id="Resource_jgayq"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("18_lf44v")
+quantity = 8
+
+[sub_resource type="Resource" id="Resource_86q2j"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("16_hqcod")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_t2udg"]
+script = ExtResource("15_565mn")
+slot_datas = Array[ExtResource("17_rs8b1")]([SubResource("Resource_jgayq"), SubResource("Resource_86q2j"), null, null, null])
+
+[sub_resource type="Resource" id="Resource_5yhiy"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("16_hqcod")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_vtpgg"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("18_lf44v")
+quantity = 6
+
+[sub_resource type="Resource" id="Resource_0dl57"]
+script = ExtResource("15_565mn")
+slot_datas = Array[ExtResource("17_rs8b1")]([SubResource("Resource_5yhiy"), SubResource("Resource_vtpgg"), null, null, null])
+
+[sub_resource type="Resource" id="Resource_ai1ah"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("18_lf44v")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_uf4wv"]
+script = ExtResource("17_rs8b1")
+item_data = ExtResource("16_hqcod")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_apwdo"]
+script = ExtResource("15_565mn")
+slot_datas = Array[ExtResource("17_rs8b1")]([SubResource("Resource_ai1ah"), SubResource("Resource_uf4wv"), null, null, null])
 
 [node name="level_1" type="Node3D"]
 script = ExtResource("1_bvlx5")
@@ -131,10 +218,17 @@ mesh_library = ExtResource("13_axysf")
 data = {
 "cells": PackedInt32Array(65534, 9, 1048582, 65532, 12, 1048582, 65532, 14, 1048582, 65532, 15, 1048582, 65531, 16, 1048582, 65531, 15, 1048582, 65530, 15, 1048582, 65529, 15, 1048582, 65528, 15, 1048582, 65527, 15, 1048582, 65526, 14, 1048582, 65526, 10, 1048582, 65526, 7, 1048582, 65526, 1, 1048582, 65526, 65534, 1048582, 65527, 65534, 1048582, 65527, 65533, 1048582, 65528, 65533, 1048582, 65529, 65533, 1048582, 65530, 65532, 1048582, 65531, 65531, 1048582, 65532, 65530, 1048582, 65533, 65529, 1048582, 65534, 65529, 1048582, 65535, 65528, 1048582, 0, 65527, 1048582, 1, 65526, 1048582, 2, 65525, 1048582, 1, 65524, 1048582, 0, 65523, 1048582, 1, 65522, 1048582, 3, 65519, 1048585, 4, 65518, 1048582, 4, 65517, 1048585, 5, 65519, 1048582, 6, 65520, 1048582, 7, 65522, 1048582, 11, 65530, 1048582, 12, 65531, 1048582, 12, 65532, 1048582, 12, 65533, 1048582, 13, 65529, 1048582, 13, 65528, 1048582, 12, 65526, 1048582, 11, 65525, 1048582, 10, 65523, 1048582, 10, 65522, 1048582, 11, 65521, 1048582, 11, 65520, 1048582, 11, 65518, 1048585, 11, 65516, 1048582, 10, 65518, 1048582, 9, 65518, 1048582, 8, 65519, 1048582, 8, 65520, 1048582, 6, 65521, 1048582, 3, 65523, 1048582, 2, 65523, 1048582, 0, 65526, 1048582, 65534, 65530, 1048582, 65532, 65532, 1048582, 65532, 65534, 1048582, 65531, 1, 1048582, 65530, 3, 1048582, 65530, 4, 1048582, 65531, 4, 1048582, 65531, 5, 1048582, 65532, 7, 1048582, 65531, 12, 1048582, 65530, 13, 1048582, 65529, 16, 1048582, 65528, 17, 1048582, 65528, 18, 1048582, 65526, 18, 1048584, 65523, 18, 1048584, 65521, 18, 1048584, 65519, 18, 1048582, 65518, 18, 1048582, 65517, 18, 1048582, 65516, 17, 1048584, 65514, 17, 1048582, 65512, 17, 1048582, 65511, 17, 1048582, 65512, 18, 1048582, 65515, 21, 1048582, 65516, 21, 1048582, 65517, 21, 1048582, 65518, 21, 1048582, 65519, 21, 1048582, 65521, 21, 1048582, 65527, 21, 1048582, 65532, 21, 1048582, 3, 21, 1048585, 5, 21, 1048582, 6, 21, 1048582, 6, 22, 1048582, 7, 22, 1048582, 7, 21, 1048582, 8, 21, 1048584, 9, 21, 1048582, 10, 21, 1048582, 12, 21, 1048582, 15, 21, 1048584, 17, 20, 1048582, 18, 20, 1048582, 19, 21, 1048582, 20, 21, 1048582, 21, 21, 1048586, 22, 20, 1048582, 22, 19, 1048582, 23, 19, 1048582, 23, 20, 1048582, 2, 65522, 1048582, 15, 65520, 1048582, 21, 65508, 1048582, 19, 65504, 1048582, 22, 65504, 1048582, 19, 65508, 1048586, 18, 65511, 1048582, 27, 65515, 1048582, 29, 65515, 1048582, 31, 65515, 1048582, 32, 65515, 1048582, 33, 65515, 1048582, 31, 65516, 1048582, 29, 65517, 1048582, 28, 65518, 1048586, 27, 65523, 1048582, 27, 65524, 1048582, 27, 65528, 1048582, 26, 65533, 1048582, 26, 65535, 1048582, 26, 1, 1048586, 26, 2, 1048582, 26, 3, 1048582, 26, 5, 1048582, 26, 6, 1048582, 26, 7, 1048582, 28, 10, 1048582, 26, 14, 1048582, 24, 65534, 1048582, 65524, 19, 1048586, 65518, 9, 1048586, 65532, 65528, 1048586, 65532, 65527, 1048586, 7, 65517, 1048586, 12, 65519, 1048586, 16, 65520, 1048586, 17, 65518, 1048586, 18, 65512, 1048584, 18, 65509, 1048586, 18, 65508, 1048586, 19, 65507, 1048586, 19, 65506, 1048586, 18, 65506, 1048586, 18, 65507, 1048586, 21, 65504, 1048586, 21, 65505, 1048586, 22, 65508, 1048586, 24, 65512, 1048586, 25, 65514, 1048586, 26, 65515, 1048586, 27, 65517, 1048586, 28, 65519, 1048586, 30, 65516, 1048586, 28, 65516, 1048586, 24, 65519, 1048586, 19, 65522, 1048586, 19, 65523, 1048586, 20, 65523, 1048586, 22, 65526, 1048586, 24, 65529, 1048586, 25, 65532, 1048585, 25, 65534, 1048586, 25, 0, 1048586, 25, 1, 1048586, 27, 6, 1048586, 29, 8, 1048585, 30, 10, 1048585, 31, 12, 1048586, 31, 13, 1048586, 31, 14, 1048586, 25, 18, 1048586, 65524, 18, 1048586, 65520, 18, 1048584, 65516, 18, 1048584, 65516, 19, 1048584, 65521, 11, 1048586, 65519, 65526, 1048585, 65521, 65526, 1048585, 65527, 65524, 1048585, 0, 65521, 1048585, 4, 65519, 1048585, 2, 65517, 1048585, 1, 65516, 1048585, 0, 65516, 1048585, 65535, 65516, 1048585, 6, 65517, 1048585, 20, 65521, 1048585, 30, 4, 1048585, 29, 7, 1048585, 30, 9, 1048585, 28, 11, 1048585, 23, 12, 1048585, 18, 14, 1048585, 16, 15, 1048585, 16, 16, 1048585, 16, 17, 1048585, 15, 17, 1048585, 15, 19, 1048585, 15, 20, 1048585, 16, 21, 1048584, 16, 22, 1048585, 17, 23, 1048585, 13, 22, 1048585, 9, 22, 1048585, 5, 22, 1048585, 4, 21, 1048585, 65523, 19, 1048585, 65515, 18, 1048585, 65517, 8, 1048585, 65518, 5, 1048585, 65519, 1, 1048585, 65519, 65535, 1048585, 65518, 65531, 1048585, 65518, 65528, 1048585, 65518, 65527, 1048585, 65517, 65526, 1048585, 65516, 65524, 1048585, 65516, 65523, 1048585, 65517, 65529, 1048585, 65520, 65529, 1048584, 15, 65522, 1048584, 16, 65518, 1048584, 20, 65509, 1048584, 20, 65507, 1048584, 21, 65507, 1048584, 20, 65506, 1048584, 26, 65520, 1048584, 26, 8, 1048584, 27, 11, 1048584, 27, 15, 1048584, 28, 17, 1048584, 28, 18, 1048584, 27, 19, 1048584, 27, 18, 1048584, 22, 21, 1048584, 20, 22, 1048584, 19, 22, 1048584, 18, 22, 1048584, 18, 21, 1048584, 0, 20, 1048584, 65531, 19, 1048584, 65527, 19, 1048584, 65526, 19, 1048584, 65525, 18, 1048584, 65521, 16, 1048584, 65521, 14, 1048584, 65520, 12, 1048584, 65520, 9, 1048584, 65520, 8, 1048584, 65520, 7, 1048584, 65520, 6, 1048584, 65515, 16, 1048584, 65516, 20, 1048584)
 }
-metadata/_editor_floor_ = Vector3(0, 0, 0)
+metadata/_editor_floor_ = Vector3(0, 7, 0)
+
+[node name="BarrelsAndCarts" type="GridMap" parent="Gridmaps"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh_library = ExtResource("13_axysf")
+data = {
+"cells": PackedInt32Array(30, 22, 16, 24, 22, 16, 34, 14, 1048592, 34, 8, 1048591, 46, 8, 1048591, 46, 7, 1048591, 34, 7, 1048591, 47, 14, 1048591, 46, 14, 1048591, 30, 30, 1048591, 24, 29, 1048591)
+}
 
 [node name="Houses" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24, 0)
 
 [node name="House" parent="Houses" instance=ExtResource("10_y6onq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.8729, 0, -35.7974)
@@ -183,6 +277,98 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 84.078
 
 [node name="House16" parent="Houses" instance=ExtResource("10_y6onq")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 65.3893, 0, 91.3658)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kjp7v")
+camera_attributes = SubResource("CameraAttributesPractical_81s0i")
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20106, 0)
+patrol = true
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20106, 7.88591)
+patrol = true
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6258, 1.20106, -35.0945)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.7875, 1.20106, -35.0945)
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.1126, 1.20106, -64.5626)
+patrol = true
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.1126, 1.20106, -90.586)
+patrol = true
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.049, 1.20106, -18.1571)
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.026, 1.20106, -33.7083)
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.026, 1.20106, -33.7083)
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.5, 1.20106, 39.5243)
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.5, 1.20106, 39.5243)
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.838, 1.20106, 20.7279)
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.087, 1.20106, 20.7279)
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.181, 1.20106, 86.8418)
+
+[node name="Enemy15" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.181, 1.20106, 66.1124)
+
+[node name="Enemy16" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.181, 1.20106, 78.2857)
+patrol = true
+
+[node name="Enemy17" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.1342, 1.20106, 80.3554)
+patrol = true
+
+[node name="Enemy18" parent="Enemies" instance=ExtResource("12_f5v7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.3059, 1.20106, 68.2133)
+patrol = true
+
+[node name="HealthBooster" parent="." instance=ExtResource("13_kaqx6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.8348, 2.53528, 17.6831)
+
+[node name="Chests" type="Node3D" parent="."]
+
+[node name="Chest" parent="Chests" instance=ExtResource("14_exve0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 45.5921, 0.731188, -45.3438)
+inventory_data = SubResource("Resource_aumr4")
+
+[node name="Chest2" parent="Chests" instance=ExtResource("14_exve0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 84.7215, 0.658027, -116.31)
+inventory_data = SubResource("Resource_hrq4i")
+
+[node name="Chest3" parent="Chests" instance=ExtResource("14_exve0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 125.619, 1.16878, -31.091)
+inventory_data = SubResource("Resource_t2udg")
+
+[node name="Chest4" parent="Chests" instance=ExtResource("14_exve0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 102.304, 0.937798, 63.5158)
+inventory_data = SubResource("Resource_0dl57")
+
+[node name="Chest5" parent="Chests" instance=ExtResource("14_exve0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 63.9606, 0.754952, 65.9613)
+inventory_data = SubResource("Resource_apwdo")
 
 [connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
 [connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
