@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=38 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_bvlx5"]
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://dkpo2gv4nwrcu" path="res://item/items/energize_apple.tres" id="16_hqcod"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="17_rs8b1"]
 [ext_resource type="Resource" uid="uid://fmpqujqkrfkp" path="res://item/items/heal_bottle.tres" id="18_lf44v"]
+[ext_resource type="PackedScene" uid="uid://dno3oha7u514a" path="res://Scenes/assistant.tscn" id="19_ehakd"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_46fo2"]
 panorama = ExtResource("11_r1vrn")
@@ -369,6 +370,15 @@ inventory_data = SubResource("Resource_0dl57")
 [node name="Chest5" parent="Chests" instance=ExtResource("14_exve0")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 63.9606, 0.754952, 65.9613)
 inventory_data = SubResource("Resource_apwdo")
+
+[node name="Assistants" type="Node3D" parent="."]
+
+[node name="Assistant" parent="Assistants" instance=ExtResource("19_ehakd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27, 0.732109, -33.688)
+
+[node name="Assistant2" parent="Assistants" instance=ExtResource("19_ehakd")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 53.781, 0.732109, 89.9424)
+dialogue_name = "second_dialogue"
 
 [connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
 [connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
