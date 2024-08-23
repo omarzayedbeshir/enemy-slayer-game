@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://br20uni821a53"]
+
+[ext_resource type="Script" path="res://Scripts/crossbow_collectable.gd" id="1_cpj0v"]
+[ext_resource type="PackedScene" uid="uid://wh0ccbs70xjl" path="res://Game Resources/Assets/Low Poly Weapon Pack - by Kickin It Studios/Low Poly Weapon Pack - by Kickin It Studios/Crossbow.fbx" id="1_itld7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0a8rp"]
+size = Vector3(1, 0.285758, 1)
+
+[node name="CrossbowCollectable" type="Node3D"]
+script = ExtResource("1_cpj0v")
+
+[node name="Crossbow" parent="." instance=ExtResource("1_itld7")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.100344)
+shape = SubResource("BoxShape3D_0a8rp")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

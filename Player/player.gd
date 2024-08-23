@@ -8,6 +8,7 @@ var found_anvil = false
 var found_crossbow = false
 var found_staff = false
 const JUMP_VELOCITY = 9.0
+var arrow_count = 4
 @export var inventory_data: InventoryData
 var direction
 var current_weapon = "sword"
@@ -22,6 +23,11 @@ func _ready():
 	PlayerManager.player = self
 
 func _physics_process(delta):
+	$AmmunitionCount/AmmunitionCell/ArrowCount/Count.text = str(arrow_count)
+	if current_weapon == "crossbow":
+		$CrosshairControl.show()
+	else:
+		$CrosshairControl.hide()
 	var health_bar_dimensions = Rect2(0, 0, health / 100.0 * 560, 85)
 	$ProgressUI/Control/HealthBar.region_rect = health_bar_dimensions
 	$ProgressUI/EnergyProgressBar.value = int(energy) + 1
@@ -56,14 +62,20 @@ func _unhandled_input(event):
 		$Rogue_Hooded/Rig/Skeleton3D/Anvil.show()
 	elif Input.is_action_just_pressed("toggle_crossbow") and found_crossbow:
 		hide_weapons()
+		$AmmunitionCount/AmmunitionCell/ArrowCount.show()
+		$AmmunitionCount.show()
 		current_weapon = "crossbow"
 		$"Rogue_Hooded/Rig/Skeleton3D/1H_Crossbow".show()
 	elif Input.is_action_just_pressed("toggle_staff") and found_staff:
 		hide_weapons()
+		$AmmunitionCount/AmmunitionCell/ArrowCount.show()
+		$AmmunitionCount.show()
 		current_weapon = "staff"
 		$Rogue_Hooded/Rig/Skeleton3D/Staff.show()
 	
 func hide_weapons():
+	$AmmunitionCount/AmmunitionCell/ArrowCount.hide()
+	$AmmunitionCount.hide()
 	$Rogue_Hooded/Rig/Skeleton3D/Knife.hide()
 	$Rogue_Hooded/Rig/Skeleton3D/Anvil.hide()
 	$"Rogue_Hooded/Rig/Skeleton3D/1H_Crossbow".hide()
@@ -81,6 +93,8 @@ func _on_animation_tree_animation_finished(anim_name):
 		$PlayerStateMachine/DodgeLeftPlayerState.transition.emit("IdlePlayerState")
 	if anim_name == "Dodge_Right":
 		$PlayerStateMachine/DodgeRightPlayerState.transition.emit("IdlePlayerState")
+	if anim_name == "1H_Ranged_Shoot":
+		$PlayerStateMachine/CrossbowShootPlayerState.transition.emit("IdlePlayerState")
 
 func interact():
 	if interact_ray.is_colliding():

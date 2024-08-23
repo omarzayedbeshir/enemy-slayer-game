@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://5v2rbeonrpfw"]
+
+[ext_resource type="PackedScene" uid="uid://b7f7io0j4lpfn" path="res://Game Resources/Assets/KayKit_Adventurers_1.0_FREE/Assets/gltf/arrow.gltf" id="1_2lu71"]
+[ext_resource type="Script" path="res://Scripts/arrow.gd" id="1_vbeqj"]
+
+[node name="Arrow" type="Node3D"]
+script = ExtResource("1_vbeqj")
+
+[node name="arrow" parent="." instance=ExtResource("1_2lu71")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -0.4)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
