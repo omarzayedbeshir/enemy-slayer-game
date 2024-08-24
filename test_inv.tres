@@ -1,25 +1,7 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=8 format=3 uid="uid://b72cg3u5ecnfw"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=2 format=3 uid="uid://b72cg3u5ecnfw"]
 
 [ext_resource type="Script" path="res://inventory/inventory_data.gd" id="1_vlmur"]
-[ext_resource type="Resource" uid="uid://dkpo2gv4nwrcu" path="res://item/items/energize_apple.tres" id="2_s155w"]
-[ext_resource type="Script" path="res://inventory/slot_data.gd" id="3_1wjo0"]
-[ext_resource type="Resource" uid="uid://fmpqujqkrfkp" path="res://item/items/heal_bottle.tres" id="4_sdelo"]
-
-[sub_resource type="Resource" id="Resource_j8gt3"]
-script = ExtResource("3_1wjo0")
-item_data = ExtResource("2_s155w")
-quantity = 93
-
-[sub_resource type="Resource" id="Resource_x67yr"]
-script = ExtResource("3_1wjo0")
-item_data = ExtResource("2_s155w")
-quantity = 7
-
-[sub_resource type="Resource" id="Resource_qdcdm"]
-script = ExtResource("3_1wjo0")
-item_data = ExtResource("4_sdelo")
-quantity = 7
 
 [resource]
 script = ExtResource("1_vlmur")
-slot_datas = Array[ExtResource("3_1wjo0")]([SubResource("Resource_j8gt3"), SubResource("Resource_x67yr"), SubResource("Resource_qdcdm"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+slot_datas = Array[Resource("res://inventory/slot_data.gd")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
