@@ -4,6 +4,7 @@ var health = 100
 var energy = 100
 const SPEED = 5.0
 var new_hit = true
+var is_invisible = false
 var found_anvil = false
 var found_crossbow = false
 var found_staff = false
@@ -74,6 +75,11 @@ func _unhandled_input(event):
 		$AmmunitionCount.show()
 		current_weapon = "staff"
 		$Rogue_Hooded/Rig/Skeleton3D/Staff.show()
+	elif Input.is_action_just_pressed("Vanish") and energy > 20 and not is_invisible:
+		is_invisible = true
+		$InvisibleGlobe.show()
+		energy -= 10
+		$InvisibleTimer.start()
 	
 func hide_weapons():
 	$AmmunitionCount/AmmunitionCell/ArrowCount.hide()
@@ -126,3 +132,8 @@ func energize():
 	energy += 10
 	if energy > 100:
 		energy = 100
+
+
+func _on_invisible_timer_timeout():
+	is_invisible = false
+	$InvisibleGlobe.hide()

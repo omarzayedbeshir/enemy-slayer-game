@@ -8,6 +8,8 @@ func _unhandled_key_input(_event):
 	if get_tree().paused:
 		show()
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	elif not $"../UI/InventoryInterface".visible:
+		hide()                                                  
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	else:
 		hide()
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

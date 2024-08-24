@@ -1,6 +1,9 @@
 extends Node3D
 
 const SPEED = 1.0
+
+
+
 var move_status = false
 # Called when the node enters the scene tree for the first time.
 func _ready():

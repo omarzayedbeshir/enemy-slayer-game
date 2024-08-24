@@ -27,7 +27,7 @@ func _process(delta):
 		velocity.y -= gravity * delta
 	var player = PlayerManager.player
 	direction = (player.position - position).normalized()
-	if see_player:
+	if see_player and not PlayerManager.player.is_invisible:
 		if previous_position and is_on_floor():
 			if previous_position.distance_to(position) < 0.03:
 				velocity.y = 5
@@ -36,7 +36,7 @@ func _process(delta):
 		anim.play("Running_A")
 		mesh.rotation.y = lerp_angle(mesh.rotation.y, atan2(direction.x, direction.z), delta * 10)
 		previous_position = position
-	elif attack_player:
+	elif attack_player and not PlayerManager.player.is_invisible:
 		velocity.x = 0
 		velocity.z = 0
 		anim.play("1H_Melee_Attack_Slice_Diagonal")
