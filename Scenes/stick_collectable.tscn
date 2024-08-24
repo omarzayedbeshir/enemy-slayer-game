@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnie2a7puyxrq"]
+
+[ext_resource type="PackedScene" uid="uid://cu25jrlgev0u" path="res://Game Resources/Assets/Low Poly Weapon Pack - by Kickin It Studios/Low Poly Weapon Pack - by Kickin It Studios/Staff.fbx" id="1_84hbc"]
+[ext_resource type="Script" path="res://Scripts/stick_collectable.gd" id="1_li3h4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fxid8"]
+size = Vector3(0.404443, 0.335732, 2.79762)
+
+[node name="StickCollectable" type="Node3D"]
+script = ExtResource("1_li3h4")
+
+[node name="Staff" parent="." instance=ExtResource("1_84hbc")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.113)
+shape = SubResource("BoxShape3D_fxid8")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

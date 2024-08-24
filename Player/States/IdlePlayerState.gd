@@ -22,5 +22,7 @@ func update(_delta):
 		transition.emit("AnvilSwingPlayerState")
 	elif Input.is_action_just_pressed("Attack") and PlayerManager.player.is_on_floor() and PlayerManager.player.current_weapon == "crossbow" and PlayerManager.player.arrow_count > 0:
 		transition.emit("CrossbowShootPlayerState")
+	elif Input.is_action_just_pressed("Attack") and PlayerManager.player.is_on_floor() and PlayerManager.player.current_weapon == "staff" and PlayerManager.player.spark_count > 0:
+		transition.emit("StaffShootPlayerState")
 	elif Input.is_action_just_pressed("Block") and PlayerManager.player.is_on_floor():
 		transition.emit("BlockPlayerState")

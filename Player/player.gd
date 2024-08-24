@@ -10,6 +10,7 @@ var found_staff = false
 const JUMP_VELOCITY = 9.0
 var arrow_count = 4
 @export var inventory_data: InventoryData
+var spark_count = 2
 var direction
 var current_weapon = "sword"
 signal toggle_inventory()
@@ -24,6 +25,7 @@ func _ready():
 
 func _physics_process(delta):
 	$AmmunitionCount/AmmunitionCell/ArrowCount/Count.text = str(arrow_count)
+	$AmmunitionCount/AmmunitionCell/SparkCount/Count.text = str(spark_count)
 	if current_weapon == "crossbow":
 		$CrosshairControl.show()
 	else:
@@ -68,13 +70,14 @@ func _unhandled_input(event):
 		$"Rogue_Hooded/Rig/Skeleton3D/1H_Crossbow".show()
 	elif Input.is_action_just_pressed("toggle_staff") and found_staff:
 		hide_weapons()
-		$AmmunitionCount/AmmunitionCell/ArrowCount.show()
+		$AmmunitionCount/AmmunitionCell/SparkCount.show()
 		$AmmunitionCount.show()
 		current_weapon = "staff"
 		$Rogue_Hooded/Rig/Skeleton3D/Staff.show()
 	
 func hide_weapons():
 	$AmmunitionCount/AmmunitionCell/ArrowCount.hide()
+	$AmmunitionCount/AmmunitionCell/SparkCount.hide()
 	$AmmunitionCount.hide()
 	$Rogue_Hooded/Rig/Skeleton3D/Knife.hide()
 	$Rogue_Hooded/Rig/Skeleton3D/Anvil.hide()
@@ -95,6 +98,8 @@ func _on_animation_tree_animation_finished(anim_name):
 		$PlayerStateMachine/DodgeRightPlayerState.transition.emit("IdlePlayerState")
 	if anim_name == "1H_Ranged_Shoot":
 		$PlayerStateMachine/CrossbowShootPlayerState.transition.emit("IdlePlayerState")
+	if anim_name == "Spellcast_Long":
+		$PlayerStateMachine/StaffShootPlayerState.transition.emit("IdlePlayerState")
 
 func interact():
 	if interact_ray.is_colliding():

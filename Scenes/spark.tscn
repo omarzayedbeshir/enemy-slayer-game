@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://dophtqgdxvflo"]
+
+[ext_resource type="Script" path="res://Scripts/spark.gd" id="1_ke0l3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iokbq"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cnokb"]
+material = SubResource("StandardMaterial3D_iokbq")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_li41v"]
+radius = 0.843636
+
+[node name="Spark" type="Node3D"]
+script = ExtResource("1_ke0l3")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+amount = 1000
+lifetime = 0.1
+mesh = SubResource("BoxMesh_cnokb")
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 10.0
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_li41v")
+
+[node name="MoveTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="EndSpark" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="timeout" from="EndSpark" to="." method="_on_end_spark_timeout"]
