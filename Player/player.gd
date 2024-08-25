@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 var health = 100
+var damage_on = false
 var energy = 100
 const SPEED = 5.0
 var new_hit = true
@@ -17,6 +18,7 @@ var current_weapon = "sword"
 signal toggle_inventory()
 @onready var interact_ray = $Rogue_Hooded/InteractRay
 @onready var player_mesh = $Rogue_Hooded
+var enemies_near = []
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -25,6 +27,9 @@ func _ready():
 	PlayerManager.player = self
 
 func _physics_process(delta):
+	if damage_on:
+		for enemy in enemies_near:
+			enemy.health = 0
 	$AmmunitionCount/AmmunitionCell/ArrowCount/Count.text = str(arrow_count)
 	$AmmunitionCount/AmmunitionCell/SparkCount/Count.text = str(spark_count)
 	if current_weapon == "crossbow":
@@ -126,6 +131,9 @@ func can_use_item(item_type):
 	if item_type is ItemDataEnergize:
 		if energy >= 95:
 			return false
+	if item_type is ItemDataProtectiveDamage:
+		if damage_on == true:
+			return false
 	return true
 
 func energize():
@@ -137,3 +145,23 @@ func energize():
 func _on_invisible_timer_timeout():
 	is_invisible = false
 	$InvisibleGlobe.hide()
+
+func protective_damage_activate():
+	damage_on = true
+	$MeshInstance3D.show()
+	$DamageTimer.start()
+
+
+func _on_damage_timer_timeout():
+	damage_on = false
+	$MeshInstance3D.hide()
+
+
+func _on_damage_area_3d_body_entered(body):
+	if "Enemy" in body.name:
+		enemies_near.append(body)
+
+
+func _on_damage_area_3d_body_exited(body):
+	if "Enemy" in body.name:
+		enemies_near.erase(body)

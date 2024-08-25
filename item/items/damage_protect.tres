@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemDataProtectiveDamage" load_steps=4 format=3 uid="uid://v8tth6wcos2d"]
+
+[ext_resource type="Script" path="res://item/item_data_protective_damage.gd" id="1_5j77n"]
+[ext_resource type="Texture2D" uid="uid://crxueqdvjtdwf" path="res://Game Resources/Assets/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="2_aigxg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en6x4"]
+atlas = ExtResource("2_aigxg")
+region = Rect2(256, 288, 32, 32)
+
+[resource]
+script = ExtResource("1_5j77n")
+name = "الحماية القاتلة"
+description = "استعمل هذه الخاصية من أجل قتل كل الأعداء القريبين لبعض اللحظات"
+texture = SubResource("AtlasTexture_en6x4")
