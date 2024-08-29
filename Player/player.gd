@@ -9,6 +9,7 @@ var is_invisible = false
 var found_anvil = false
 var found_crossbow = false
 var found_staff = false
+var freeze_game_on = false
 const JUMP_VELOCITY = 9.0
 var arrow_count = 4
 @export var inventory_data: InventoryData
@@ -134,6 +135,9 @@ func can_use_item(item_type):
 	if item_type is ItemDataProtectiveDamage:
 		if damage_on == true:
 			return false
+	if item_type is ItemDataFreeze:
+		if freeze_game_on == true:
+			return false
 	return true
 
 func energize():
@@ -165,3 +169,17 @@ func _on_damage_area_3d_body_entered(body):
 func _on_damage_area_3d_body_exited(body):
 	if "Enemy" in body.name:
 		enemies_near.erase(body)
+
+func freeze_game_activate():
+	freeze_game_on = true
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	get_tree().paused = true
+	$FreezeTimer.start()
+	
+
+
+func _on_freeze_timer_timeout():
+	freeze_game_on = false
+	process_mode = Node.PROCESS_MODE_INHERIT
+	get_tree().paused = false
+	
