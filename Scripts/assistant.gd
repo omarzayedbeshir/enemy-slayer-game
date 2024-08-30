@@ -13,7 +13,7 @@ func _on_area_3d_body_entered(body):
 		$InteractText.show()
 		player_near = true
 		
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	if Input.is_action_just_pressed("Interact") and player_near:
 		DialogueManager.show_example_dialogue_balloon(load(dialogue_file), dialogue_name)
 

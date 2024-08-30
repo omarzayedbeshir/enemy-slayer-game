@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://lacnk5tkrt2b"]
+
+[ext_resource type="Script" path="res://Scripts/keys.gd" id="1_8g7sp"]
+[ext_resource type="PackedScene" uid="uid://cn8jb1mts0fsw" path="res://Game Resources/Assets/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/keyring.gltf" id="1_pxqo5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m5obd"]
+radius = 0.644129
+
+[node name="Keys" type="Node3D"]
+script = ExtResource("1_8g7sp")
+
+[node name="keyring" parent="." instance=ExtResource("1_pxqo5")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0640122)
+shape = SubResource("SphereShape3D_m5obd")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

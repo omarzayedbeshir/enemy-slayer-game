@@ -8,7 +8,7 @@ var external_inventory_owner
 signal force_close
 signal drop_slot_data(slot_data)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if grabbed_slot.visible:
 		grabbed_slot.global_position = get_global_mouse_position() + Vector2(35, 35)
 	if external_inventory_owner and external_inventory_owner.global_position.distance_to(PlayerManager.get_global_position()) > 4:

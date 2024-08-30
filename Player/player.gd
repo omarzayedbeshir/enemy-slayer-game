@@ -9,6 +9,7 @@ var is_invisible = false
 var found_anvil = false
 var found_crossbow = false
 var found_staff = false
+var won = false
 var freeze_game_on = false
 const JUMP_VELOCITY = 9.0
 var arrow_count = 4
@@ -41,7 +42,7 @@ func _physics_process(delta):
 	$ProgressUI/Control/HealthBar.region_rect = health_bar_dimensions
 	$ProgressUI/EnergyProgressBar.value = int(energy) + 1
 	energy -= delta * 0.2
-	if energy <= 0 or health <= 0:
+	if energy <= 0 or health <= 0 and not won:
 		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 	# Add the gravity.
 	if not is_on_floor():
@@ -57,7 +58,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	if Input.is_action_just_pressed("Inventory"):
 		toggle_inventory.emit()
 	elif Input.is_action_just_pressed("Interact"):

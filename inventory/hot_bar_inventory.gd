@@ -1,7 +1,7 @@
 extends PanelContainer
 
 @onready var h_box_container = $MarginContainer/HBoxContainer
-const slot = preload("res://inventory/slot.tscn")
+const Slot = preload("res://inventory/slot.tscn")
 signal hot_bar_use(index)
 
 func _unhandled_key_input(event):
@@ -21,7 +21,7 @@ func populate_hot_bar(inventory_data: InventoryData):
 		child.queue_free()
 	
 	for slot_data in inventory_data.slot_datas.slice(0, 6):
-		var slot = slot.instantiate()
+		var slot = Slot.instantiate()
 		h_box_container.add_child(slot)
 		
 		
