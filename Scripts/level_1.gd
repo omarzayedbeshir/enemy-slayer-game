@@ -5,6 +5,10 @@ extends Node3D
 const PickUp = preload("res://item/pick_up.tscn")
 @onready var hot_bar_inventory = $UI/HotBarInventory
 
+func _process(_delta):
+	if len($Enemies.get_children()) == 0:
+		$Portal.show()
+		
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hot_bar_inventory.set_inventory_data(player.inventory_data)

@@ -7,6 +7,22 @@ const PickUp = preload("res://item/pick_up.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	PlayerManager.player.health = PlayerManager.health_transfer
+	PlayerManager.player.energy = PlayerManager.energy_transfer
+	PlayerManager.player.found_anvil = PlayerManager.found_anvil_transfer
+	PlayerManager.player.found_crossbow = PlayerManager.found_crossbow_transfer
+	PlayerManager.player.found_staff = PlayerManager.found_stick_transfer
+	PlayerManager.player.inventory_data = PlayerManager.inventory_data_transfer
+	PlayerManager.player.arrow_count = PlayerManager.arrows_transfer
+	PlayerManager.player.spark_count = PlayerManager.sparks_transfer
+
+	if PlayerManager.player.found_crossbow:
+		PlayerManager.player.get_node("WeaponsInventory/InventoryCells/CrossbowIcon")
+	if PlayerManager.player.found_anvil:
+		PlayerManager.player.get_node("WeaponsInventory/InventoryCells/AnvilIcon")
+	if PlayerManager.player.found_staff:
+		PlayerManager.player.get_node("WeaponsInventory/InventoryCells/StaffIcon")
+
 	hot_bar_inventory.set_inventory_data(player.inventory_data)
 	inventory_interface.set_player_inventory_data(player.inventory_data)
 	player.toggle_inventory.connect(toggle_inventory_interface)

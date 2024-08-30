@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://ciff3h2bevdk5"]
+[gd_scene load_steps=44 format=3 uid="uid://ciff3h2bevdk5"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_bvlx5"]
 [ext_resource type="PackedScene" uid="uid://dgvchfqq7w6ah" path="res://Player/player.tscn" id="1_qxaud"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://buy33us8kh6lx" path="res://Scenes/arrow_collectable.tscn" id="22_k86dn"]
 [ext_resource type="PackedScene" uid="uid://cnie2a7puyxrq" path="res://Scenes/stick_collectable.tscn" id="23_4kwm6"]
 [ext_resource type="PackedScene" uid="uid://u3rnbp02p103" path="res://Scenes/spark_collectable.tscn" id="24_8xr8v"]
+[ext_resource type="PackedScene" uid="uid://kk6tcbfbeaa2" path="res://Scenes/portal.tscn" id="25_pmrwl"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_46fo2"]
 panorama = ExtResource("11_r1vrn")
@@ -401,6 +402,10 @@ transform = Transform3D(1, 0, 0, 0, -0.222587, -0.974913, 0, 0.974913, -0.222587
 
 [node name="SparkCollectable" parent="Collectables" instance=ExtResource("24_8xr8v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.4093, 2, 92)
+
+[node name="Portal" parent="." instance=ExtResource("25_pmrwl")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 46.1972, 0.788937, 77.6868)
+visible = false
 
 [connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
 [connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
