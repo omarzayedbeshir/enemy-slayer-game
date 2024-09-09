@@ -29,7 +29,7 @@ func _process(delta):
 	direction = (player.position - position).normalized()
 	if see_player and not PlayerManager.player.is_invisible:
 		if previous_position and is_on_floor():
-			if previous_position.distance_to(position) < 0.03:
+			if previous_position.distance_to(position) < 0.025:
 				velocity.y = 5
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED

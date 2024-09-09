@@ -17,11 +17,11 @@ func _ready():
 	PlayerManager.player.spark_count = PlayerManager.sparks_transfer
 
 	if PlayerManager.player.found_crossbow:
-		PlayerManager.player.get_node("WeaponsInventory/InventoryCells/CrossbowIcon")
+		PlayerManager.player.get_node("WeaponInventory/InventoryCells/CrossbowIcon").show()
 	if PlayerManager.player.found_anvil:
-		PlayerManager.player.get_node("WeaponsInventory/InventoryCells/AnvilIcon")
+		PlayerManager.player.get_node("WeaponInventory/InventoryCells/AnvilIcon").show()
 	if PlayerManager.player.found_staff:
-		PlayerManager.player.get_node("WeaponsInventory/InventoryCells/StaffIcon")
+		PlayerManager.player.get_node("WeaponInventory/InventoryCells/StaffIcon").show()
 
 	hot_bar_inventory.set_inventory_data(player.inventory_data)
 	inventory_interface.set_player_inventory_data(player.inventory_data)
