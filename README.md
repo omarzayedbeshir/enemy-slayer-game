@@ -2,8 +2,11 @@
 
 A **3D Role-Playing Game (RPG)** developed in **Godot** with **GDScript**.
 This project highlights my ability to design and implement **large-scale game systems** and also served as the foundation of a **10+ hour educational course** I created on 3D game development.
+
 ---
+
 ![til](gameplay.gif)
+
 ---
 
 ## 🚀 Highlights
